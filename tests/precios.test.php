@@ -22,38 +22,16 @@ if (!function_exists('wp_send_json_success')) { function wp_send_json_success($d
 
 require_once __DIR__ . '/../inc/quote.php';
 
-$casos = [
-    [
-        'nombre' => 'Pendón 80×200 cm = 56000',
-        'entrada' => ['producto' => 'pendon', 'ancho' => 80, 'alto' => 200, 'cantidad' => 1, 'material' => 'frontlit13', 'diseno' => false, 'acabados' => []],
-        'total' => 56000,
-    ],
-    [
-        'nombre' => 'Pendón 30×30 = 35000 (mínimo)',
-        'entrada' => ['producto' => 'pendon', 'ancho' => 30, 'alto' => 30, 'cantidad' => 1, 'material' => 'frontlit13', 'diseno' => false, 'acabados' => []],
-        'total' => 35000,
-    ],
-    [
-        'nombre' => 'Vinilo 100×100 ×4 con laminado = 244000',
-        'entrada' => ['producto' => 'vinilo', 'ancho' => 100, 'alto' => 100, 'cantidad' => 4, 'material' => 'mate', 'diseno' => false, 'acabados' => ['laminado']],
-        'total' => 244000,
-    ],
-    [
-        'nombre' => 'Pasacalle 500×100 con refuerzo = 187000',
-        'entrada' => ['producto' => 'pasacalle', 'ancho' => 500, 'alto' => 100, 'cantidad' => 1, 'material' => 'frontlit13', 'diseno' => false, 'acabados' => ['refuerzo']],
-        'total' => 187000,
-    ],
-    [
-        'nombre' => 'Stickers ×2 = 90000',
-        'entrada' => ['producto' => 'stickers', 'cantidad' => 2],
-        'total' => 90000,
-    ],
-];
+// Datos editables: cuando cambien los precios o casos de control, edita tests/datos-precios.json
+$datos = json_decode(file_get_contents(__DIR__ . '/datos-precios.json'), true);
+$casos = $datos['casos'];
 
 $ok = 0;
 $fail = 0;
 foreach ($casos as $caso) {
-    $r = lp_calcular($caso['entrada']);
+    $entrada = $caso['entrada'];
+    $entrada['producto'] = $caso['producto'];
+    $r = lp_calcular($entrada);
     $total = isset($r['total']) ? $r['total'] : null;
     $paso = !empty($r['ok']) && $total === $caso['total'];
     if ($paso) {
