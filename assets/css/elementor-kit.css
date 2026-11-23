@@ -1,0 +1,168 @@
+/* =====================================================================
+   LA PUBLICIDAD — Estilos globales
+   Dónde pegarlo: WordPress → Apariencia → Personalizar → CSS adicional
+   Valores tomados del código del diseño en Figma Make.
+   ===================================================================== */
+/* (las fuentes Outfit e Inter ya las carga el tema desde functions.php) */
+
+:root {
+  --lp-green: #A0F900;
+  --lp-navy: #070836;
+  --lp-surface: #03041F;
+  --lp-white: #FFFFFF;
+  --lp-soft: #B8C1C8;
+  --lp-display: 'Outfit', sans-serif;
+  --lp-body: 'Inter', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--lp-surface); font-family: var(--lp-body); }
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--lp-green);
+  outline-offset: 3px;
+}
+
+/* ---------- Estructura ---------- */
+.e-con.lp-wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px !important;
+}
+.e-con.lp-section { position: relative; overflow: hidden; padding: 80px 0 !important; }
+@media (min-width: 1024px) { .e-con.lp-section { padding: 112px 0 !important; } }
+.e-con.lp-navy    { background-color: var(--lp-navy); }
+.e-con.lp-surface { background-color: var(--lp-surface); }
+
+/* ---------- Hero ---------- */
+.e-con.lp-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh; /* evita el salto de la barra del navegador en celulares */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 96px 0 !important;
+  overflow: hidden;
+  background-color: var(--lp-surface);
+  background-image: url('../img/hero.webp'); /* foto por defecto; en Elementor puedes cambiarla en Estilo → Fondo */
+  background-size: cover;
+  background-position: center right;
+}
+/* Degradado #03041F fuerte del lado del texto, transparente hacia la foto */
+.e-con.lp-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(to right, rgba(3,4,31,.96) 0%, rgba(3,4,31,.82) 38%, rgba(3,4,31,.45) 62%, rgba(3,4,31,.08) 100%),
+    linear-gradient(to bottom, rgba(3,4,31,.35) 0%, transparent 25%, transparent 75%, rgba(3,4,31,.5) 100%);
+}
+@media (max-width: 767px) {
+  .e-con.lp-hero::after { background: rgba(3,4,31,.88); } /* contraste del texto en celular */
+}
+.e-con.lp-hero > * { position: relative; z-index: 2; }
+.e-con.lp-hero-content { max-width: 42rem; gap: 0; padding: 0 !important; }
+.lp-hero .elementor-widget { margin: 0; }
+
+.lp-badge { width: fit-content; margin-bottom: 32px !important; }
+.lp-badge p {
+  display: inline-flex; align-items: center; gap: 8px; margin: 0;
+  padding: 6px 16px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.1);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  color: rgba(255,255,255,.8); font: 500 13px var(--lp-body);
+}
+.lp-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lp-green); display: inline-block; animation: lp-pulse 2s ease-in-out infinite; }
+@keyframes lp-pulse { 50% { opacity: .4; } }
+
+.lp-h1 { margin-bottom: 24px !important; }
+.lp-h1 .elementor-heading-title {
+  font-family: var(--lp-display) !important; font-weight: 900 !important;
+  font-size: clamp(2.8rem, 6vw, 4.5rem) !important; line-height: 1.05 !important;
+  color: #fff !important; margin: 0;
+}
+.lp-accent { color: var(--lp-green); }
+.lp-lead { margin-bottom: 40px !important; }
+.lp-lead p { max-width: 32rem; margin: 0; color: rgba(255,255,255,.75); font: 400 1.125rem/1.7 var(--lp-body); }
+
+.e-con.lp-actions { flex-direction: row !important; flex-wrap: wrap; gap: 16px; padding: 0 !important; }
+body .lp-btn-green .elementor-button {
+  background: var(--lp-green) !important; color: var(--lp-surface) !important;
+  font-family: var(--lp-display) !important; font-weight: 800 !important; letter-spacing: .04em;
+  font-size: 16px !important; padding: 16px 32px !important; border: 0 !important;
+  border-radius: 10px !important; transition: all .2s;
+}
+body .lp-btn-green .elementor-button:hover {
+  background: #ABFA1F !important;
+  transform: translateY(-1px); box-shadow: 0 8px 24px rgba(160,249,0,.4);
+}
+body .lp-btn-outline .elementor-button {
+  background: transparent !important; color: #fff !important;
+  font-family: var(--lp-display) !important; font-weight: 600 !important;
+  font-size: 16px !important; padding: 16px 32px !important;
+  border: 2px solid rgba(255,255,255,.5) !important; border-radius: 10px !important; transition: all .2s;
+}
+body .lp-btn-outline .elementor-button:hover {
+  border-color: var(--lp-green) !important; color: var(--lp-green) !important;
+  background: rgba(160,249,0,.08) !important;
+}
+
+.e-con.lp-stats {
+  flex-direction: row !important; flex-wrap: wrap; gap: 32px;
+  margin-top: 56px; padding: 32px 0 0 !important; border-top: 1px solid rgba(255,255,255,.15);
+}
+.e-con.lp-stat { width: auto !important; gap: 2px; padding: 0 !important; }
+.lp-stat-value .elementor-heading-title { font: 800 24px var(--lp-display) !important; color: var(--lp-green) !important; margin: 0; }
+.lp-stat-label p { margin: 0; color: rgba(255,255,255,.7); font: 400 13px var(--lp-body); }
+
+.e-con.lp-hero > .lp-scroll { position: absolute !important; bottom: 32px; left: 50%; transform: translateX(-50%); width: auto !important; text-align: center; }
+.lp-scroll p { margin: 0; color: rgba(255,255,255,.7); font: 400 13px var(--lp-body); }
+.lp-scroll p::after { content: ""; display: block; width: 1px; height: 32px; background: rgba(255,255,255,.2); margin: 8px auto 0; }
+
+/* ---------- Encabezado de sección ---------- */
+.e-con.lp-sec-head { align-items: center; text-align: center; gap: 0; margin-bottom: 56px; padding: 0 !important; }
+.lp-label { margin-bottom: 12px !important; }
+.lp-label p { margin: 0; font: 700 13px var(--lp-display); letter-spacing: .12em; text-transform: uppercase; color: var(--lp-green); }
+.lp-h2 { margin-bottom: 16px !important; }
+.lp-h2 .elementor-heading-title { font: 800 clamp(2rem, 4vw, 3rem)/1.15 var(--lp-display) !important; color: #fff !important; margin: 0; }
+.lp-sub p { max-width: 36rem; margin: 0 auto; color: rgba(255,255,255,.7); font: 400 16px/1.6 var(--lp-body); }
+
+/* ---------- Tarjetas de servicio ---------- */
+.e-con.lp-grid { display: grid !important; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; padding: 0 !important; }
+@media (max-width: 1023px) { .e-con.lp-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 639px)  { .e-con.lp-grid { grid-template-columns: 1fr; } }
+.e-con.lp-grid > .e-con { width: 100% !important; }
+
+.e-con.lp-card {
+  position: relative; overflow: hidden; gap: 0; padding: 0 !important;
+  border-radius: 16px; border: 1px solid rgba(160,249,0,.12);
+  background: rgba(255,255,255,.04); transition: all .3s;
+}
+.e-con.lp-card:hover {
+  border-color: rgba(160,249,0,.45); background: rgba(160,249,0,.05);
+  transform: translateY(-4px); box-shadow: 0 12px 40px rgba(160,249,0,.1);
+}
+.lp-card .elementor-widget { margin: 0; width: 100%; }
+.lp-card-img { position: relative; overflow: hidden; }
+.lp-card-img img { display: block; width: 100%; height: 11rem; object-fit: cover; transition: transform .5s; }
+.lp-card:hover .lp-card-img img { transform: scale(1.05); }
+.lp-card-img::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(7,8,54,.8), transparent); }
+.lp-card-icon { position: absolute !important; top: 12px; left: 12px; z-index: 3; width: auto !important; }
+.lp-card-icon .elementor-icon {
+  display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+  font-size: 20px; color: var(--lp-green);
+  background: rgba(160,249,0,.15); border: 1px solid rgba(160,249,0,.3); border-radius: 12px;
+}
+.lp-card-icon .elementor-icon svg { width: 20px; height: 20px; fill: var(--lp-green); }
+.e-con.lp-card-body { gap: 6px; padding: 20px !important; }
+.lp-card-title .elementor-heading-title { font: 700 16px var(--lp-display) !important; color: #fff !important; margin: 0; }
+.lp-card-text p { margin: 0 0 8px; color: rgba(255,255,255,.7); font: 400 14px/1.6 var(--lp-body); }
+body .lp-link .elementor-button {
+  background: transparent !important; border: 0 !important; box-shadow: none !important;
+  padding: 0 !important; color: var(--lp-green) !important; font: 600 14px var(--lp-display) !important;
+}
+body .lp-link .elementor-button:hover { opacity: .8; }

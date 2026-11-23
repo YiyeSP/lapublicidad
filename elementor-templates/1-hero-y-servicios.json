@@ -1,0 +1,865 @@
+{
+  "content": [
+    {
+      "id": "c32d826",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-hero",
+        "_element_id": "inicio",
+        "background_background": "classic",
+        "background_color": "#03041F",
+        "background_position": "center right",
+        "background_size": "cover"
+      },
+      "elements": [
+        {
+          "id": "378d20e",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          },
+          "elements": [
+            {
+              "id": "6c89863",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-hero-content"
+              },
+              "elements": [
+                {
+                  "id": "3e20ac5",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p><span class=\"lp-dot\"></span> Putumayo, Colombia — Servicio local</p>",
+                    "_css_classes": "lp-badge"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c5b5892",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Haz que tu marca<br><span class=\"lp-accent\">se vea.</span>",
+                    "header_size": "h1",
+                    "_css_classes": "lp-h1"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "a9288d7",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Impresión digital y soluciones publicitarias para empresas y emprendedores en Putumayo. Calidad profesional, atención cercana y entrega puntual.</p>",
+                    "_css_classes": "lp-lead"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "af838dc",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-actions"
+                  },
+                  "elements": [
+                    {
+                      "id": "5ab7cec",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "QUIERO MI DESCUENTO",
+                        "link": {
+                          "url": "#",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": "data-lap-open-discount|1"
+                        },
+                        "_css_classes": "lp-btn-green"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5eba361",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Ver servicios",
+                        "link": {
+                          "url": "#servicios",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "lp-btn-outline"
+                      },
+                      "elements": []
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "54c968b",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-stats"
+                  },
+                  "elements": [
+                    {
+                      "id": "034ae04",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-stat"
+                      },
+                      "elements": [
+                        {
+                          "id": "25822d2",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "[Dato real]",
+                            "header_size": "div",
+                            "_css_classes": "lp-stat-value"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "f761392",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Proyectos entregados</p>",
+                            "_css_classes": "lp-stat-label"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    },
+                    {
+                      "id": "70f846b",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-stat"
+                      },
+                      "elements": [
+                        {
+                          "id": "00ab9cf",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "[Dato real]",
+                            "header_size": "div",
+                            "_css_classes": "lp-stat-value"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "e6ce5f8",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Años de experiencia</p>",
+                            "_css_classes": "lp-stat-label"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    },
+                    {
+                      "id": "7d06e49",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-stat"
+                      },
+                      "elements": [
+                        {
+                          "id": "7329fd4",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "[Dato real]",
+                            "header_size": "div",
+                            "_css_classes": "lp-stat-value"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "8e48d8b",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Clientes satisfechos</p>",
+                            "_css_classes": "lp-stat-label"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    }
+                  ],
+                  "isInner": true
+                }
+              ],
+              "isInner": true
+            }
+          ],
+          "isInner": true
+        },
+        {
+          "id": "140c698",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>Desplázate</p>",
+            "_css_classes": "lp-scroll"
+          },
+          "elements": []
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "6e1634f",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-section lp-navy",
+        "_element_id": "servicios"
+      },
+      "elements": [
+        {
+          "id": "da7a459",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          },
+          "elements": [
+            {
+              "id": "a7b8ae8",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-sec-head"
+              },
+              "elements": [
+                {
+                  "id": "a022265",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Lo que hacemos</p>",
+                    "_css_classes": "lp-label"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "d521da2",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Nuestros servicios",
+                    "header_size": "h2",
+                    "_css_classes": "lp-h2"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "5a32bff",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Desde un sticker hasta una valla de gran formato — cubrimos todo lo que tu marca necesita para destacar.</p>",
+                    "_css_classes": "lp-sub"
+                  },
+                  "elements": []
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "d096177",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-grid"
+              },
+              "elements": [
+                {
+                  "id": "269276e",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "ca6425a",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=260&fit=crop&auto=format",
+                          "id": "",
+                          "alt": "Impresión Digital para producción publicitaria",
+                          "source": "library"
+                        },
+                        "image_size": "full",
+                        "_css_classes": "lp-card-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "dc4150e",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-print",
+                          "library": "fa-solid"
+                        },
+                        "_css_classes": "lp-card-icon"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "1e45ef6",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-card-body"
+                      },
+                      "elements": [
+                        {
+                          "id": "a65936e",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Impresión Digital",
+                            "header_size": "h3",
+                            "_css_classes": "lp-card-title"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "672a635",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Gran formato en lona, lámina y vinilo. Pendones, pasacalles, vallas y avisos con calidad fotográfica.</p>",
+                            "_css_classes": "lp-card-text"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "f44f2c7",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "settings": {
+                            "text": "Ver →",
+                            "link": {
+                              "url": "/servicios/impresion-digital/",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "_css_classes": "lp-link"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "2b8eee1",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "05c9e16",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1565689877814-bce72bcc90e6?w=400&h=260&fit=crop&auto=format",
+                          "id": "",
+                          "alt": "Corte y Troquelado para producción publicitaria",
+                          "source": "library"
+                        },
+                        "image_size": "full",
+                        "_css_classes": "lp-card-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c568281",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-cut",
+                          "library": "fa-solid"
+                        },
+                        "_css_classes": "lp-card-icon"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "6a59eb1",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-card-body"
+                      },
+                      "elements": [
+                        {
+                          "id": "d488df9",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Corte y Troquelado",
+                            "header_size": "h3",
+                            "_css_classes": "lp-card-title"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "4540115",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Avisos corpóreos en acrílico 2D y 3D, letras de alto relieve y rótulos en neón flex.</p>",
+                            "_css_classes": "lp-card-text"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "348f5fb",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "settings": {
+                            "text": "Ver →",
+                            "link": {
+                              "url": "/servicios/corte-y-troquelado/",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "_css_classes": "lp-link"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "b2b0d40",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "a5d6edb",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&h=260&fit=crop&auto=format",
+                          "id": "",
+                          "alt": "Diseño Gráfico para producción publicitaria",
+                          "source": "library"
+                        },
+                        "image_size": "full",
+                        "_css_classes": "lp-card-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "fe8ba32",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-palette",
+                          "library": "fa-solid"
+                        },
+                        "_css_classes": "lp-card-icon"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "bcc814f",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-card-body"
+                      },
+                      "elements": [
+                        {
+                          "id": "123ee26",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Diseño Gráfico",
+                            "header_size": "h3",
+                            "_css_classes": "lp-card-title"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "ff02598",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Creación de logotipos, imagen corporativa y piezas gráficas listas para producción.</p>",
+                            "_css_classes": "lp-card-text"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c99c2bd",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "settings": {
+                            "text": "Ver →",
+                            "link": {
+                              "url": "/servicios/diseno-grafico/",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "_css_classes": "lp-link"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "71cfffc",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "33457f3",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=260&fit=crop&auto=format",
+                          "id": "",
+                          "alt": "Instalación para producción publicitaria",
+                          "source": "library"
+                        },
+                        "image_size": "full",
+                        "_css_classes": "lp-card-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f3b0c0f",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-wrench",
+                          "library": "fa-solid"
+                        },
+                        "_css_classes": "lp-card-icon"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "a0155c6",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-card-body"
+                      },
+                      "elements": [
+                        {
+                          "id": "5beb4f6",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Instalación",
+                            "header_size": "h3",
+                            "_css_classes": "lp-card-title"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "f5d30ee",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Montaje profesional de avisos publicitarios y vinilos adhesivos en fachadas y superficies.</p>",
+                            "_css_classes": "lp-card-text"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "6cccfca",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "settings": {
+                            "text": "Ver →",
+                            "link": {
+                              "url": "/servicios/instalacion/",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "_css_classes": "lp-link"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "4c55994",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "30f600c",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=260&fit=crop&auto=format",
+                          "id": "",
+                          "alt": "Litografía para producción publicitaria",
+                          "source": "library"
+                        },
+                        "image_size": "full",
+                        "_css_classes": "lp-card-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "2394a48",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "far fa-newspaper",
+                          "library": "fa-regular"
+                        },
+                        "_css_classes": "lp-card-icon"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "dac90fe",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-card-body"
+                      },
+                      "elements": [
+                        {
+                          "id": "47e927b",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Litografía",
+                            "header_size": "h3",
+                            "_css_classes": "lp-card-title"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "61a90dc",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Folletos, revistas, tarjetas y carpetas en offset de alta calidad, coordinado con aliado de confianza.</p>",
+                            "_css_classes": "lp-card-text"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "bbc9ad5",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "settings": {
+                            "text": "Ver →",
+                            "link": {
+                              "url": "/servicios/litografia/",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "_css_classes": "lp-link"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "2d5fc70",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-card"
+                  },
+                  "elements": [
+                    {
+                      "id": "4b70963",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://images.unsplash.com/photo-1563302111-eab4b145e6c9?w=400&h=260&fit=crop&auto=format",
+                          "id": "",
+                          "alt": "Corte Láser para producción publicitaria",
+                          "source": "library"
+                        },
+                        "image_size": "full",
+                        "_css_classes": "lp-card-img"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "147b31e",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-microscope",
+                          "library": "fa-solid"
+                        },
+                        "_css_classes": "lp-card-icon"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "8c53cac",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-card-body"
+                      },
+                      "elements": [
+                        {
+                          "id": "214dc97",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Corte Láser",
+                            "header_size": "h3",
+                            "_css_classes": "lp-card-title"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "abfc192",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Corte de precisión sobre MDF, acrílico y polietileno, coordinado con aliado especializado.</p>",
+                            "_css_classes": "lp-card-text"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "bff7e9b",
+                          "elType": "widget",
+                          "widgetType": "button",
+                          "settings": {
+                            "text": "Ver →",
+                            "link": {
+                              "url": "/servicios/corte-laser/",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "_css_classes": "lp-link"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    }
+                  ],
+                  "isInner": true
+                }
+              ],
+              "isInner": true
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "LA PUBLICIDAD - Hero y Servicios",
+  "type": "page"
+}

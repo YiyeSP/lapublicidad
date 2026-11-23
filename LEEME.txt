@@ -1,0 +1,59 @@
+TEMA "LA PUBLICIDAD" PARA WORDPRESS + ELEMENTOR
+Autor: Ramiro Solarte Pérez (Aprendiz SENA, Tecnólogo en Desarrollo Multimedia y Web, ficha 3336532)
+
+REQUISITOS: WordPress 6.0 o superior y PHP 7.4 o superior. Elementor gratuito (recomendado).
+IMPORTANTE: este tema fue escrito y revisado fuera de WordPress. El JavaScript, el CSS y el cálculo de
+precios se probaron en un navegador real, pero el PHP no se pudo ejecutar allí. Pruébalo primero en
+LocalWP y, si ves un error en pantalla, copia el mensaje completo para corregirlo.
+
+1) INSTALACIÓN (LocalWP o cualquier WordPress)
+   - Apariencia → Temas → Añadir nuevo → Subir tema → elige lapublicidad.zip → Instalar → Activar.
+   - Al activarlo se crean las tablas de la base de datos (cotizaciones y descuentos) y se activa
+     Elementor para Productos, Servicios y Portafolio.
+   - Plugins: instala y activa "Elementor" (gratuito).
+
+2) PRIMEROS PASOS (10 minutos)
+   a. Menú lateral "LA PUBLICIDAD → Contenido demo" → botón "Importar contenido de demostración".
+      Crea 12 productos, 6 servicios y 8 trabajos con sus fotos.
+   b. Ajustes → Lectura → "Tu página de inicio muestra": una página estática. Crea una página "Inicio" (vacía)
+      y elígela. Con la página vacía se ve la landing por defecto del tema.
+   c. Apariencia → Personalizar → "LA PUBLICIDAD · Datos de contacto": WhatsApp, teléfono, correo,
+      ubicación y año de vigencia de precios. También puedes subir tu logo en "Identidad del sitio".
+   d. Apariencia → Menús: crea un menú y asígnalo a "Menú principal" (si no, el tema usa uno por defecto).
+
+3) EDITAR ARRASTRANDO Y SOLTANDO (Elementor)
+   - Edita la página "Inicio" con Elementor. En el panel izquierdo aparece la categoría "LA PUBLICIDAD" con:
+     Carrusel de productos 3D · Cotizador con calculadora · Tarjetas de servicios ·
+     Portafolio · Botón de descuento web · Contacto y formulario.
+   - Para empezar con todo armado: en Elementor, carpeta de plantillas → Importar y sube un archivo de
+     la carpeta elementor-templates/:
+       2-inicio-completo-con-widgets.json  → la página completa con los widgets del tema.
+       1-hero-y-servicios.json             → hero y servicios con tarjetas totalmente editables.
+   - Foto del hero: clic en el contenedor grande → Estilo → Fondo → Imagen.
+   - Los textos, enlaces y colores de las plantillas se cambian desde el panel de Elementor.
+
+4) DÓNDE ESTÁ CADA COSA
+   Productos / Servicios / Portafolio ...... menú lateral de WordPress (cada uno con su foto y campos).
+   Cotizaciones recibidas (base de datos) .. LA PUBLICIDAD → Cotizaciones (con descarga a Excel/CSV).
+   Códigos de descuento .................... LA PUBLICIDAD → Descuentos.
+   Precios del cotizador ................... LA PUBLICIDAD → Precios (tarifas por m², mínimos, medidas, acabados).
+   Colores y fuentes ....................... assets/css/main.css (variables al inicio del archivo).
+   Textos de la landing por defecto ........ template-parts/landing.php
+   Cabecera y menú móvil ................... header.php   |   Pie de página: footer.php
+   Página de cada servicio ("Ver →") ....... single-lp_servicio.php (muestra los productos del servicio).
+
+5) CÓMO FUNCIONA EL COTIZADOR Y EL DESCUENTO
+   - El precio se calcula en el navegador (en vivo) y se vuelve a calcular en el servidor al enviar;
+     lo que queda guardado es siempre el total del servidor, así no hay diferencias con la tabla de precios.
+   - Cotización rápida: nombre + WhatsApp (10 dígitos). Formal: además correo, cédula/NIT y ciudad.
+     Ambas exigen la autorización de datos personales (Ley 1581 de 2012).
+   - Descuento web: 10 %, código personal LP-XXXXX, vence en 5 días, uno por mes por número de WhatsApp.
+     No aplica a cotizaciones hechas en el local.
+   - Límite: el código se entrega en pantalla y el cliente lo envía por WhatsApp con un clic. El envío
+     automático desde el servidor requiere la API de WhatsApp Business (de pago).
+   - Si usas una caché de página, excluye la portada o el nonce de seguridad puede vencer (verás un error al enviar).
+
+6) NOTAS
+   - Todas las fotos son las que subiste, optimizadas a WebP en assets/img/catalogo.
+   - Si cambias de tema, los widgets y el cotizador dejan de funcionar (los datos de la base no se borran).
+   - Las cifras "[Dato real]" y el testimonio de ejemplo son marcadores: reemplázalos por datos reales.

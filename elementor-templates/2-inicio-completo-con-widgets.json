@@ -1,0 +1,627 @@
+{
+  "content": [
+    {
+      "id": "c32d826",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-hero",
+        "_element_id": "inicio",
+        "background_background": "classic",
+        "background_color": "#03041F",
+        "background_position": "center right",
+        "background_size": "cover"
+      },
+      "elements": [
+        {
+          "id": "378d20e",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          },
+          "elements": [
+            {
+              "id": "6c89863",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-hero-content"
+              },
+              "elements": [
+                {
+                  "id": "3e20ac5",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p><span class=\"lp-dot\"></span> Putumayo, Colombia — Servicio local</p>",
+                    "_css_classes": "lp-badge"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c5b5892",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Haz que tu marca<br><span class=\"lp-accent\">se vea.</span>",
+                    "header_size": "h1",
+                    "_css_classes": "lp-h1"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "a9288d7",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Impresión digital y soluciones publicitarias para empresas y emprendedores en Putumayo. Calidad profesional, atención cercana y entrega puntual.</p>",
+                    "_css_classes": "lp-lead"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "af838dc",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-actions"
+                  },
+                  "elements": [
+                    {
+                      "id": "5ab7cec",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "QUIERO MI DESCUENTO",
+                        "link": {
+                          "url": "#",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": "data-lap-open-discount|1"
+                        },
+                        "_css_classes": "lp-btn-green"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5eba361",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Ver servicios",
+                        "link": {
+                          "url": "#servicios",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "_css_classes": "lp-btn-outline"
+                      },
+                      "elements": []
+                    }
+                  ],
+                  "isInner": true
+                },
+                {
+                  "id": "54c968b",
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-stats"
+                  },
+                  "elements": [
+                    {
+                      "id": "034ae04",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-stat"
+                      },
+                      "elements": [
+                        {
+                          "id": "25822d2",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "[Dato real]",
+                            "header_size": "div",
+                            "_css_classes": "lp-stat-value"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "f761392",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Proyectos entregados</p>",
+                            "_css_classes": "lp-stat-label"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    },
+                    {
+                      "id": "70f846b",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-stat"
+                      },
+                      "elements": [
+                        {
+                          "id": "00ab9cf",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "[Dato real]",
+                            "header_size": "div",
+                            "_css_classes": "lp-stat-value"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "e6ce5f8",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Años de experiencia</p>",
+                            "_css_classes": "lp-stat-label"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    },
+                    {
+                      "id": "7d06e49",
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-stat"
+                      },
+                      "elements": [
+                        {
+                          "id": "7329fd4",
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "[Dato real]",
+                            "header_size": "div",
+                            "_css_classes": "lp-stat-value"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "8e48d8b",
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Clientes satisfechos</p>",
+                            "_css_classes": "lp-stat-label"
+                          },
+                          "elements": []
+                        }
+                      ],
+                      "isInner": true
+                    }
+                  ],
+                  "isInner": true
+                }
+              ],
+              "isInner": true
+            }
+          ],
+          "isInner": true
+        },
+        {
+          "id": "140c698",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>Desplázate</p>",
+            "_css_classes": "lp-scroll"
+          },
+          "elements": []
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "d48ba5b",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-section lp-surface",
+        "_element_id": "productos"
+      },
+      "elements": [
+        {
+          "id": "8ec2f97",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          },
+          "elements": [
+            {
+              "id": "d16a7c2",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-sec-head"
+              },
+              "elements": [
+                {
+                  "id": "c9acf8d",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Catálogo</p>",
+                    "_css_classes": "lp-label"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "0ff7813",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Productos <span class=\"lp-accent\">destacados</span>",
+                    "header_size": "h2",
+                    "_css_classes": "lp-h2"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "20485ca",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Precios orientativos · cada proyecto se cotiza a medida</p>",
+                    "_css_classes": "lp-sub"
+                  },
+                  "elements": []
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "a77291f",
+              "elType": "widget",
+              "widgetType": "lp_coverflow",
+              "settings": {
+                "cantidad": 12
+              },
+              "elements": []
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "54e859c",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-section lp-navy",
+        "_element_id": "servicios"
+      },
+      "elements": [
+        {
+          "id": "d89ebcb",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          },
+          "elements": [
+            {
+              "id": "53f0ca9",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-sec-head"
+              },
+              "elements": [
+                {
+                  "id": "5ec656c",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Lo que hacemos</p>",
+                    "_css_classes": "lp-label"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c842c3c",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Nuestros servicios",
+                    "header_size": "h2",
+                    "_css_classes": "lp-h2"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "67b4137",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Desde un sticker hasta una valla de gran formato — cubrimos todo lo que tu marca necesita para destacar.</p>",
+                    "_css_classes": "lp-sub"
+                  },
+                  "elements": []
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "a8637db",
+              "elType": "widget",
+              "widgetType": "lp_servicios",
+              "settings": {
+                "columnas": "3"
+              },
+              "elements": []
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "6f914ab",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-section lp-surface",
+        "_element_id": "cotizador"
+      },
+      "elements": [
+        {
+          "id": "e72157d",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          },
+          "elements": [
+            {
+              "id": "a163469",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-sec-head"
+              },
+              "elements": [
+                {
+                  "id": "98888ec",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Cotizador</p>",
+                    "_css_classes": "lp-label"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "60760b6",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Configura tu proyecto",
+                    "header_size": "h2",
+                    "_css_classes": "lp-h2"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "95eb870",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Calcula un valor estimado con los precios oficiales vigentes. El valor final será verificado por un asesor.</p>",
+                    "_css_classes": "lp-sub"
+                  },
+                  "elements": []
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "123d901",
+              "elType": "widget",
+              "widgetType": "lp_cotizador",
+              "settings": {},
+              "elements": []
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "060ca0b",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-section lp-navy",
+        "_element_id": "portafolio"
+      },
+      "elements": [
+        {
+          "id": "40e64f4",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          },
+          "elements": [
+            {
+              "id": "9793583",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-sec-head"
+              },
+              "elements": [
+                {
+                  "id": "f6cae58",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Portafolio</p>",
+                    "_css_classes": "lp-label"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "eca2ac9",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Trabajos realizados",
+                    "header_size": "h2",
+                    "_css_classes": "lp-h2"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "c31b89a",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Una muestra de los proyectos que hemos entregado a clientes de toda la región.</p>",
+                    "_css_classes": "lp-sub"
+                  },
+                  "elements": []
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "be80dbd",
+              "elType": "widget",
+              "widgetType": "lp_portafolio",
+              "settings": {
+                "columnas": "4",
+                "cantidad": 8
+              },
+              "elements": []
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "c4d6659",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-section lp-surface",
+        "_element_id": "contacto"
+      },
+      "elements": [
+        {
+          "id": "ad8b4c6",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          },
+          "elements": [
+            {
+              "id": "5a18c45",
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-sec-head"
+              },
+              "elements": [
+                {
+                  "id": "b190be6",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Contáctanos</p>",
+                    "_css_classes": "lp-label"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "01869ad",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Hablemos de tu proyecto",
+                    "header_size": "h2",
+                    "_css_classes": "lp-h2"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "5ded321",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Estamos listos para ayudarte. Cuéntanos qué necesitas y te respondemos en menos de 2 horas en días hábiles.</p>",
+                    "_css_classes": "lp-sub"
+                  },
+                  "elements": []
+                }
+              ],
+              "isInner": true
+            },
+            {
+              "id": "ee5de9b",
+              "elType": "widget",
+              "widgetType": "lp_contacto",
+              "settings": {},
+              "elements": []
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "LA PUBLICIDAD - Inicio completo (con widgets)",
+  "type": "page"
+}
