@@ -10,8 +10,11 @@ desktop.ini
 
 # Dependencias y compilados (por si se agregan más adelante)
 node_modules/
-vendor/
+/vendor/
 dist/
+
+# Se permite assets/vendor para librerías de terceros descargadas localmente (ej. Bootstrap grid).
+!assets/vendor/
 
 # Secretos y archivos locales de WordPress (nunca se suben)
 .env
