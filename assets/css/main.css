@@ -82,9 +82,10 @@ h1, h2, h3, h4 { font-family: var(--lp-display); line-height: 1.15; margin: 0; }
 .lap-nav__list, .lap-offcanvas__list, .lap-footer__list { list-style: none; margin: 0; padding: 0; }
 .lap-nav__list { display: flex; gap: 4px; }
 .lap-nav a { display: block; padding: 10px 14px; border-radius: 10px; font: 500 14px var(--lp-display); color: rgba(255,255,255,.85); text-decoration: none; transition: color .2s, background .2s; position: relative; }
-.lap-nav a .lp-nav-u, .lap-offcanvas__list a .lp-nav-u { border-bottom: 2px solid transparent; transition: border-color .2s; padding-bottom: 1px; }
+.lap-nav a .lp-nav-u, .lap-offcanvas__list a .lp-nav-u { position: relative; display: inline-block; padding-bottom: 1px; }
+.lap-nav a .lp-nav-u::after, .lap-offcanvas__list a .lp-nav-u::after { content: ''; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0; background: var(--lp-green); transition: width .25s ease; }
 .lap-nav a:hover, .lap-nav .current-menu-item > a { color: #fff; background: rgba(255,255,255,.2); }
-.lap-nav a:hover .lp-nav-u, .lap-nav .current-menu-item > a .lp-nav-u, .lap-offcanvas__list a:hover .lp-nav-u { border-bottom-color: var(--lp-green); }
+.lap-nav a:hover .lp-nav-u::after, .lap-nav .current-menu-item > a .lp-nav-u::after, .lap-offcanvas__list a:hover .lp-nav-u::after { width: 100%; }
 .lap-header__actions { display: none; align-items: center; gap: 12px; }
 .lap-toggle { width: 44px; height: 44px; border: 0; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; cursor: pointer; }
 .lap-toggle span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform .25s, opacity .25s; }
