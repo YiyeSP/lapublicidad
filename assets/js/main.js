@@ -79,6 +79,20 @@
   function initHeader() {
     var h = $('.lap-header');
     if (!h) { return; }
+    // Subrayado parcial en menú (ej: Inicio -> "icio", Productos -> "ctos")
+    var underlineMap = { inicio: 4, productos: 4, servicios: 3, nosotros: 5, portafolio: 5, contacto: 5 };
+    $$('.lap-nav a, .lap-offcanvas__list a').forEach(function (a) {
+      if (a.querySelector('.lp-nav-u')) { return; }
+      var text = a.textContent.trim();
+      var key = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      var n = underlineMap[key] || Math.min(3, Math.max(2, Math.floor(text.length / 2)));
+      if (text.length > n) {
+        a.textContent = '';
+        a.appendChild(document.createTextNode(text.slice(0, text.length - n)));
+        var u = el('span', 'lp-nav-u', text.slice(text.length - n));
+        a.appendChild(u);
+      }
+    });
     var onScroll = function () { h.classList.toggle('is-scrolled', window.scrollY > 20); };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
