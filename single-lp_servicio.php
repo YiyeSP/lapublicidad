@@ -34,9 +34,11 @@ while ( have_posts() ) :
 		<?php if ( ! empty( $items ) ) : ?>
 			<section class="lap-section lap-bg-navy">
 				<div class="lap-container">
-					<div class="lap-grid lap-grid--3">
+					<?php /* Rejilla Bootstrap 5.3.3 (solo grid, cargada solo en esta plantilla). */ ?>
+					<div class="row g-4">
 						<?php foreach ( $items as $it ) : ?>
-							<article class="lap-card lap-card--item">
+							<div class="col-12 col-md-6 col-lg-4">
+								<article class="lap-card lap-card--item">
 								<span class="lap-card__media">
 									<?php if ( $it['img'] ) : ?>
 										<img src="<?php echo esc_url( $it['img'] ); ?>" alt="<?php echo esc_attr( $it['name'] ); ?>" loading="lazy">
@@ -48,7 +50,8 @@ while ( have_posts() ) :
 									<h2><?php echo esc_html( $it['name'] ); ?></h2>
 									<a class="lap-btn lap-btn--green lap-btn--sm" href="<?php echo esc_url( home_url( '/#cotizador' ) ); ?>">Cotizar</a>
 								</span>
-							</article>
+								</article>
+							</div>
 						<?php endforeach; ?>
 					</div>
 				</div>
