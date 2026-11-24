@@ -24,14 +24,22 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <header class="lap-header" id="lap-header">
 	<div class="lap-container lap-header__bar">
-		<div class="lap-logo"><?php echo lp_logo(); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
+		<div class="lap-brand">
+			<div class="lap-logo"><?php echo lp_logo(); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
+			<div class="lap-location" aria-label="Ubicación">
+				<span class="lap-location__dot" aria-hidden="true"></span>
+				<span>Mocoa - Putumayo, Colombia - Servicio local y on line</span>
+			</div>
+		</div>
 
 		<nav class="lap-nav" aria-label="Menú principal">
 			<?php lp_render_menu( 'primary', 'lap-nav__list' ); ?>
 		</nav>
 
 		<div class="lap-header__actions">
-			<a class="lap-btn lap-btn--ghost lap-btn--sm" href="<?php echo esc_url( home_url( '/?s=' ) ); ?>">Buscar</a>
+			<a class="lap-btn lap-btn--search lap-btn--sm" href="<?php echo esc_url( home_url( '/?s=' ) ); ?>">
+				<span class="dashicons dashicons-search" aria-hidden="true"></span><span>Buscar</span>
+			</a>
 			<a class="lap-btn lap-btn--green lap-btn--sm" href="<?php echo esc_url( is_front_page() ? '#cotizador' : home_url( '/#cotizador' ) ); ?>">Cotizar ahora</a>
 		</div>
 
