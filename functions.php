@@ -20,7 +20,7 @@ define( 'LP_VERSION', '1.0.0' );
 define( 'LP_DIR', get_template_directory() );
 define( 'LP_URI', get_template_directory_uri() );
 
-$lp_modules = array( 'setup', 'cpt', 'quote', 'shortcodes', 'admin', 'demo', 'elementor' );
+$lp_modules = array( 'setup', 'cpt', 'quote', 'shortcodes', 'admin', 'demo', 'elementor', 'search' );
 foreach ( $lp_modules as $lp_module ) {
 	$lp_file = LP_DIR . '/inc/' . $lp_module . '.php';
 	if ( file_exists( $lp_file ) ) {
