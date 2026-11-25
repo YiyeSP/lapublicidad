@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* ---------- Datos de contacto (se cambian en Apariencia → Personalizar) ---------- */
 function lp_defaults() {
 	return array(
-		'whatsapp'  => '573208058411',
+		'whatsapp'  => '573105784288',
 		'telefono'  => '+57 310 578 4288',
 		'correo'    => 'info@lapublicidad.co',
 		'direccion' => 'Mocoa, Putumayo, Colombia',
@@ -129,7 +129,7 @@ function lp_customize( $wp_customize ) {
 		)
 	);
 	$fields = array(
-		'whatsapp'  => 'WhatsApp del negocio (solo números con indicativo, ej. 573208058411)',
+		'whatsapp'  => 'WhatsApp del negocio (solo números con indicativo, ej. 573105784288)',
 		'telefono'  => 'Teléfono',
 		'correo'    => 'Correo electrónico',
 		'direccion' => 'Ubicación',

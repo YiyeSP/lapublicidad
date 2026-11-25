@@ -49,7 +49,7 @@
 ## Pendientes / observaciones
 
 - [ ] A5: conseguir `CONTENIDO_EXTERNO_LA_PUBLICIDAD.png` y completar comparación visual.
-- [ ] B3: renombrar el título del GitHub Project (queda “@YiyeSP's untitled project”).
+- [ ] B3: renombrar el título del GitHub Project en GitHub (queda “@YiyeSP's untitled project”; el intento por UI no persistió).
 - [ ] B4.2: aplicar prueba acotada de Bootstrap en `landing.php` solo si se aprueba.
-- [ ] Revisar/limpiar datos de prueba en BD local (`wp_lp_cotizaciones`, `wp_lp_descuentos`) antes de entrega final.
-- [ ] Verificar número WhatsApp usado en mensajes generados (`wa.me/573208058411` observado en pruebas) vs. número esperado `573105784288`.
+- [x] Limpiar datos de prueba en BD local (`wp_lp_cotizaciones`, `wp_lp_descuentos`) antes de entrega final. *Hecho el 2026-11-25: se eliminaron 2 cotizaciones y 1 descuento de prueba.*
+- [x] Verificar número WhatsApp del negocio. *Hecho: `inc/setup.php` actualizado a `573105784288` (valor por defecto y ayuda del Customizer).*
