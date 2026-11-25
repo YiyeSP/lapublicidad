@@ -49,7 +49,7 @@
 ## Pendientes / observaciones
 
 - [ ] A5: conseguir `CONTENIDO_EXTERNO_LA_PUBLICIDAD.png` y completar comparación visual.
-- [ ] B3: renombrar el título del GitHub Project en GitHub (queda “@YiyeSP's untitled project”; el intento por UI no persistió).
+- [x] B3: renombrar el título del GitHub Project en GitHub. *Hecho el 2026-11-25: renombrado manualmente a “LA PUBLICIDAD — Backlog”.*
 - [ ] B4.2: aplicar prueba acotada de Bootstrap en `landing.php` solo si se aprueba.
 - [x] Limpiar datos de prueba en BD local (`wp_lp_cotizaciones`, `wp_lp_descuentos`) antes de entrega final. *Hecho el 2026-11-25: se eliminaron 2 cotizaciones y 1 descuento de prueba.*
 - [x] Verificar número WhatsApp del negocio. *Hecho: `inc/setup.php` actualizado a `573105784288` (valor por defecto y ayuda del Customizer).*
