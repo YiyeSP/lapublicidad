@@ -95,11 +95,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p class="lap-label lap-label--blue">Nuestra diferencia</p>
 				<h2 class="lap-h2">¿Por qué elegirnos?</h2>
 			</header>
-			<div class="lap-grid lap-grid--4">
-				<article class="lap-why__card"><span class="dashicons dashicons-groups" aria-hidden="true"></span><small>Trato directo</small><h3>Atención personalizada</h3><p>Te ayudamos a elegir la solución que realmente necesitas, sin tecnicismos ni presión.</p></article>
-				<article class="lap-why__card"><span class="dashicons dashicons-awards" aria-hidden="true"></span><small>Alta resolución</small><h3>Calidad de impresión</h3><p>Equipos de gran formato y materiales duraderos para que tu marca se vea profesional.</p></article>
-				<article class="lap-why__card"><span class="dashicons dashicons-store" aria-hidden="true"></span><small>Cualquier escala</small><h3>Para empresas y emprendedores</h3><p>Opciones para negocios grandes, pequeños y personas que están comenzando su marca.</p></article>
-				<article class="lap-why__card"><span class="dashicons dashicons-admin-tools" aria-hidden="true"></span><small>Servicio completo</small><h3>Instalación y montaje</h3><p>También ofrecemos apoyo para llevar la solución hasta el lugar donde se necesita.</p></article>
+			<?php /* Rejilla Bootstrap 5.3.3 (grid), manteniendo estilos de tarjeta del tema. */ ?>
+			<div class="row g-4">
+				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-groups" aria-hidden="true"></span><small>Trato directo</small><h3>Atención personalizada</h3><p>Te ayudamos a elegir la solución que realmente necesitas, sin tecnicismos ni presión.</p></article></div>
+				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-awards" aria-hidden="true"></span><small>Alta resolución</small><h3>Calidad de impresión</h3><p>Equipos de gran formato y materiales duraderos para que tu marca se vea profesional.</p></article></div>
+				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-store" aria-hidden="true"></span><small>Cualquier escala</small><h3>Para empresas y emprendedores</h3><p>Opciones para negocios grandes, pequeños y personas que están comenzando su marca.</p></article></div>
+				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-admin-tools" aria-hidden="true"></span><small>Servicio completo</small><h3>Instalación y montaje</h3><p>También ofrecemos apoyo para llevar la solución hasta el lugar donde se necesita.</p></article></div>
 			</div>
 			<div class="lap-banner">
 				<p><strong>No necesitas saber de publicidad.</strong> <span>Nosotros te ayudamos a elegir.</span><small>Cuéntanos qué necesitas y te orientamos sin costo adicional.</small></p>
@@ -132,10 +133,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h2 id="lap-aliados-title" class="lap-h2">Aliados y servicios especializados</h2>
 				<p class="lap-sub">Para algunos servicios especializados trabajamos con aliados de confianza, garantizando siempre la mejor calidad y coordinando todo el proceso por ti.</p>
 			</header>
-			<div class="lap-grid lap-grid--3">
-				<article class="lap-ally"><span class="dashicons dashicons-media-text" aria-hidden="true"></span><h3>Litografía <small>Aliado</small></h3><p>Impresión offset de alta calidad para volantes, catálogos, revistas y material editorial en grandes tirajes.</p></article>
-				<article class="lap-ally"><span class="dashicons dashicons-lightbulb" aria-hidden="true"></span><h3>Corte láser <small>Aliado</small></h3><p>Corte y grabado de precisión en acrílico, madera, cuero y otros materiales, realizado por nuestros aliados especializados.</p></article>
-				<article class="lap-ally"><span class="dashicons dashicons-admin-appearance" aria-hidden="true"></span><h3>Impresión UV <small>Aliado</small></h3><p>Impresión directa sobre superficies rígidas como acrílico, vidrio y metal, a través de aliados certificados.</p></article>
+			<?php /* Rejilla Bootstrap 5.3.3 (grid), manteniendo estilos de tarjeta del tema. */ ?>
+			<div class="row g-4">
+				<div class="col-12 col-md-6 col-lg-4"><article class="lap-ally"><span class="dashicons dashicons-media-text" aria-hidden="true"></span><h3>Litografía <small>Aliado</small></h3><p>Impresión offset de alta calidad para volantes, catálogos, revistas y material editorial en grandes tirajes.</p></article></div>
+				<div class="col-12 col-md-6 col-lg-4"><article class="lap-ally"><span class="dashicons dashicons-lightbulb" aria-hidden="true"></span><h3>Corte láser <small>Aliado</small></h3><p>Corte y grabado de precisión en acrílico, madera, cuero y otros materiales, realizado por nuestros aliados especializados.</p></article></div>
+				<div class="col-12 col-md-6 col-lg-4"><article class="lap-ally"><span class="dashicons dashicons-admin-appearance" aria-hidden="true"></span><h3>Impresión UV <small>Aliado</small></h3><p>Impresión directa sobre superficies rígidas como acrílico, vidrio y metal, a través de aliados certificados.</p></article></div>
 			</div>
 			<p class="lap-ally-note lap-ally-note--center">Los servicios de aliados son coordinados por nuestro equipo para garantizar calidad y cumplimiento. Nosotros gestionamos la producción y tú solo recibes el resultado final.</p>
 		</div>

@@ -90,8 +90,8 @@ function lp_enqueue() {
 		null
 	);
 	wp_enqueue_style( 'dashicons' );
-	// Bootstrap 5.3.3: solo la rejilla, y solo en la página individual de servicio (integración acotada).
-	if ( is_singular( 'lp_servicio' ) ) {
+	// Bootstrap 5.3.3: solo la rejilla, carga acotada (servicio individual y portada).
+	if ( is_singular( 'lp_servicio' ) || is_front_page() ) {
 		wp_enqueue_style( 'lp-bootstrap-grid', lp_asset( 'vendor/bootstrap-5.3.3/bootstrap-grid.min.css' ), array(), '5.3.3' );
 	}
 	wp_enqueue_style( 'lp-main', lp_asset( 'css/main.css' ), array( 'lp-fonts' ), LP_VERSION );
