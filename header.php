@@ -26,10 +26,6 @@ if ( function_exists( 'wp_body_open' ) ) {
 	<div class="lap-container lap-header__bar">
 		<div class="lap-brand">
 			<div class="lap-logo"><?php echo lp_logo(); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
-			<div class="lap-location" aria-label="Ubicación">
-				<span class="lap-location__dot" aria-hidden="true"></span>
-				<span>Mocoa - Putumayo, Colombia - Servicio local y on line</span>
-			</div>
 		</div>
 
 		<nav class="lap-nav" aria-label="Menú principal">
