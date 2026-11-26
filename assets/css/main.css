@@ -49,6 +49,7 @@ h1, h2, h3, h4 { font-family: var(--lp-display); line-height: 1.15; margin: 0; }
 }
 .lap-btn--green { background: var(--lp-green); color: var(--lp-surface); }
 .lap-btn--green:hover { background: #ABFA1F; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(160,249,0,.4); }
+.lap-btn[data-lap-open-discount]::before { content: ''; width: 20px; height: 20px; flex: 0 0 20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2303041F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='8' width='18' height='13' rx='2'/%3E%3Cpath d='M12 8v13M3 12h18M7.5 8a2.5 2.5 0 1 1 0-5C9.5 3 12 8 12 8s2.5-5 4.5-5a2.5 2.5 0 1 1 0 5'/%3E%3C/svg%3E") center/contain no-repeat; }
 .lap-btn--outline { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); font-weight: 600; }
 .lap-btn--outline:hover { border-color: var(--lp-green); color: var(--lp-green); background: rgba(160,249,0,.08); }
 .lap-btn--ghost { background: transparent; color: var(--lp-green); border-color: var(--lp-green); font-weight: 600; }
