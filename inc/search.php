@@ -14,24 +14,29 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function lp_search_synonym_groups() {
 	return array(
-		array( 'sticker', 'stickers', 'esticker', 'estickers', 'estiker', 'estiquers', 'stiker', 'stikers', 'calcomania', 'calcomanias', 'adhesivo', 'adhesivos', 'etiqueta', 'etiquetas', 'pegatina', 'pegatinas' ),
-		array( 'aviso', 'avisos', 'letrero', 'letreros', 'senaletica', 'senalizacion', 'señaletica', 'señalizacion', 'cartel', 'carteles' ),
+		array( 'sticker', 'stickers', 'esticker', 'estickers', 'estiker', 'estiquers', 'stiker', 'stikers', 'calcomania', 'calcomanias', 'adhesivo', 'adhesivos', 'etiqueta', 'etiquetas', 'pegatina', 'pegatinas', 'vinilo' ),
+		array( 'aviso', 'avisos', 'letrero', 'letreros', 'senaletica', 'senalizacion', 'señaletica', 'señalizacion', 'cartel', 'carteles', 'marco', 'metalico', 'metálico' ),
 		array( 'pendon', 'pendones', 'banner', 'banners', 'roll', 'rollup', 'roll-up', 'porta', 'portapendon' ),
+		array( 'pasacalle', 'pasacalles', 'valla', 'vallas', 'lona', 'lamina', 'lámina', 'outdoor', 'exterior', 'publicitaria', 'publicitario' ),
 		array( 'caja', 'cajas', 'luminosa', 'luminosas', 'luminoso', 'luminosos', 'lightbox', 'cajon', 'cajón' ),
 		array( 'cuadrada', 'cuadrado', 'cuadradas', 'cuadrados' ),
-		array( 'diseno', 'diseño', 'disenos', 'diseños', 'grafico', 'grafica', 'graficos', 'graficas', 'gráfico', 'gráfica', 'gráficos', 'gráficas', 'arte', 'publicidad', 'publicitario', 'publicitaria' ),
-		array( 'vinilo', 'vinilos', 'microperforado', 'microperforados', 'laminado', 'laminados' ),
-		array( 'tarjeta', 'tarjetas', 'presentacion', 'presentación', 'corporativa', 'corporativas' ),
+		array( 'diseno', 'diseño', 'disenos', 'diseños', 'grafico', 'grafica', 'graficos', 'graficas', 'gráfico', 'gráfica', 'gráficos', 'gráficas', 'arte', 'publicidad', 'logotipo', 'logotipos', 'logo', 'logos', 'marca', 'marcas', 'identidad', 'corporativa', 'corporativo', 'imagen' ),
+		array( 'vinilo', 'vinilos', 'microperforado', 'microperforados', 'laminado', 'laminados', 'adhesivo', 'adhesivos' ),
+		array( 'tarjeta', 'tarjetas', 'presentacion', 'presentación', 'corporativa', 'corporativas', 'mate', 'uv', 'parcial', 'sencilla', 'sencillas' ),
 		array( 'volante', 'volantes', 'flyer', 'flyers', 'plegable', 'plegables', 'brochure' ),
+		array( 'folleto', 'folletos', 'triptico', 'tríptico', 'diptico', 'díptico' ),
+		array( 'revista', 'revistas', 'catalogo', 'catálogo', 'catalogos', 'catálogos' ),
+		array( 'carpeta', 'carpetas', 'carta', 'oficio', 'folder' ),
 		array( 'mug', 'mugs', 'pocillo', 'pocillos', 'taza', 'tazas' ),
 		array( 'camiseta', 'camisetas', 'camisa', 'camisas', 'estampado', 'estampados', 'sublimacion', 'sublimación' ),
-		array( 'logo', 'logos', 'logotipo', 'logotipos', 'marca', 'marcas', 'identidad' ),
 		array( 'impresion', 'impresión', 'impresiones', 'imprimir', 'digital', 'gran', 'formato' ),
-		array( 'valla', 'vallas', 'pasacalle', 'pasacalles', 'outdoor', 'exterior' ),
+		array( 'corte', 'troquelado', 'troquel', 'troquelados' ),
+		array( 'laser', 'láser', 'mdf', 'polietileno', 'acrilico', 'acrílico' ),
+		array( 'corporeo', 'corpóreo', 'corporeos', 'corpóreos', '3d', '2d', 'neon', 'neón', 'flex' ),
+		array( 'instalacion', 'instalación', 'montaje', 'instalar', 'avisos', 'vinilos' ),
+		array( 'litografia', 'litografía', 'litografico', 'litográfico', 'offset' ),
 		array( 'sello', 'sellos', 'sellado' ),
 		array( 'factura', 'facturas', 'facturero', 'factureros', 'talonario', 'talonarios', 'recibo', 'recibos' ),
-		array( 'acrilico', 'acrílico', 'acrilicos', 'acrílicos' ),
-		array( 'instalacion', 'instalación', 'montaje', 'instalar' ),
 	);
 }
 

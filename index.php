@@ -23,6 +23,11 @@ get_header();
 				}
 				?>
 			</h1>
+			<?php if ( is_search() ) : ?>
+				<div class="lap-search-again">
+					<?php get_search_form(); ?>
+				</div>
+			<?php endif; ?>
 		</header>
 		<?php if ( have_posts() ) : ?>
 			<div class="lap-grid lap-grid--3">
