@@ -310,7 +310,7 @@ function lp_footer_extras() {
 		<form method="dialog"><button class="lap-dialog__close" aria-label="Cerrar">×</button></form>
 		<h2 id="lap-discount-title">Tu 10 % de descuento</h2>
 		<div data-role="paso1">
-			<p>Cotiza tu trabajo desde la web y recibe un código de descuento. Es personal, vence en 5 días y se permite uno por mes por número de WhatsApp. No aplica a cotizaciones hechas en el local.</p>
+			<p>Cotiza tu trabajo desde la web y recibe un código de descuento. Es personal, vence en 5 días y se permite uno por mes por número de WhatsApp. <strong>Solo aplica para compras por la página web, de ninguna manera presencial.</strong></p>
 			<form class="lap-form" data-lap-discount-form novalidate>
 				<div class="lap-field" data-field="nombre"><label for="lapd-nombre">Nombre</label><input id="lapd-nombre" name="nombre" type="text" autocomplete="name"></div>
 				<div class="lap-field" data-field="whatsapp"><label for="lapd-wa">WhatsApp (10 dígitos)</label><input id="lapd-wa" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="3001234567"></div>
@@ -324,7 +324,8 @@ function lp_footer_extras() {
 			<p>¡Listo! Este es tu código:</p>
 			<p class="lap-code" data-role="codigo"></p>
 			<p class="lap-note">Vence el <strong data-role="vence"></strong>. Escríbelo en el cotizador para aplicar el 10 %.</p>
-			<a class="lap-btn lap-btn--green lap-btn--block" data-role="wa" href="#" target="_blank" rel="noopener">Enviar mi código por WhatsApp</a>
+			<p class="lap-note" data-role="sent-msg" hidden></p>
+			<a class="lap-btn lap-btn--green lap-btn--block" data-role="wa" href="#" target="_blank" rel="noopener">Recibir mi código por WhatsApp</a>
 			<a class="lap-btn lap-btn--outline lap-btn--block" href="<?php echo esc_url( home_url( '/#cotizador' ) ); ?>" data-role="ir">Ir al cotizador</a>
 		</div>
 	</dialog>

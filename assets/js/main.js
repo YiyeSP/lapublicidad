@@ -451,7 +451,19 @@
           if (!res || !res.success) { err.textContent = (res && res.data && res.data.message) || 'No pudimos generar el código.'; err.hidden = false; return; }
           $('[data-role="codigo"]', dlg).textContent = res.data.codigo;
           $('[data-role="vence"]', dlg).textContent = res.data.vence;
-          $('[data-role="wa"]', dlg).href = res.data.whatsapp_url;
+          var waBtn = $('[data-role="wa"]', dlg);
+          var sentMsg = $('[data-role="sent-msg"]', dlg);
+          waBtn.href = res.data.whatsapp_url;
+          if (res.data.sent_by_api) {
+            waBtn.hidden = true;
+            if (sentMsg) { sentMsg.textContent = 'Tu código fue enviado a tu WhatsApp. Revisa tu chat.'; sentMsg.hidden = false; }
+          } else {
+            waBtn.hidden = false;
+            if (sentMsg) {
+              sentMsg.textContent = res.data.api_configured ? 'No pudimos enviarlo automáticamente; usa el botón para recibirlo por WhatsApp.' : 'Usa el botón para recibir tu código por WhatsApp.';
+              sentMsg.hidden = false;
+            }
+          }
           store('lap_codigo', res.data.codigo);
           var ci = $('[name="codigo"]'); if (ci) { ci.value = res.data.codigo; }
           p1.hidden = true; p2.hidden = false;

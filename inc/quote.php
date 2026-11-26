@@ -513,6 +513,90 @@ function lp_ajax_guardar() {
 add_action( 'wp_ajax_nopriv_lp_guardar_cotizacion', 'lp_ajax_guardar' );
 add_action( 'wp_ajax_lp_guardar_cotizacion', 'lp_ajax_guardar' );
 
+/**
+ * Configuración de WhatsApp Cloud API (futuro). Definir en wp-config.php:
+ * define('LP_WA_CLOUD_TOKEN', '...');        // Token de acceso
+ * define('LP_WA_CLOUD_PHONE_ID', '...');     // ID del número de teléfono
+ * define('LP_WA_CLOUD_TEMPLATE', '...');     // Nombre de plantilla aprobada
+ * define('LP_WA_CLOUD_LANG', 'es');          // Opcional, idioma de plantilla
+ */
+function lp_wa_cloud_enabled() {
+	$keys = array( 'LP_WA_CLOUD_TOKEN', 'LP_WA_CLOUD_PHONE_ID', 'LP_WA_CLOUD_TEMPLATE' );
+	foreach ( $keys as $k ) {
+		if ( ! defined( $k ) || '' === trim( (string) constant( $k ) ) ) {
+			return false;
+		}
+	}
+	return true;
+}
+
+/**
+ * Envía el código de descuento por WhatsApp Cloud API.
+ *
+ * @param string $wa10   WhatsApp del cliente (10 dígitos, inicia en 3).
+ * @param string $nombre Nombre del cliente.
+ * @param string $codigo Código de descuento.
+ * @param string $vence  Fecha de vencimiento legible.
+ * @return array{ok:bool,message:string}
+ */
+function lp_wa_cloud_send_discount( $wa10, $nombre, $codigo, $vence ) {
+	if ( ! lp_wa_cloud_enabled() ) {
+		return array( 'ok' => false, 'message' => 'WhatsApp Cloud API no configurada.' );
+	}
+
+	$token    = trim( (string) LP_WA_CLOUD_TOKEN );
+	$phone_id = trim( (string) LP_WA_CLOUD_PHONE_ID );
+	$template = trim( (string) LP_WA_CLOUD_TEMPLATE );
+	$lang     = defined( 'LP_WA_CLOUD_LANG' ) && '' !== trim( (string) LP_WA_CLOUD_LANG ) ? trim( (string) LP_WA_CLOUD_LANG ) : 'es';
+	$to       = '57' . preg_replace( '/\D/', '', (string) $wa10 );
+
+	$body = array(
+		'messaging_product' => 'whatsapp',
+		'to'                => $to,
+		'type'              => 'template',
+		'template'          => array(
+			'name'       => $template,
+			'language'   => array( 'code' => $lang ),
+			'components' => array(
+				array(
+					'type'       => 'body',
+					'parameters' => array(
+						array( 'type' => 'text', 'text' => $nombre ),
+						array( 'type' => 'text', 'text' => $codigo ),
+						array( 'type' => 'text', 'text' => $vence ),
+					),
+				),
+			),
+		),
+	);
+
+	$body = apply_filters( 'lp_wa_cloud_discount_payload', $body, $wa10, $nombre, $codigo, $vence );
+
+	$url      = 'https://graph.facebook.com/v20.0/' . rawurlencode( $phone_id ) . '/messages';
+	$response = wp_remote_post(
+		$url,
+		array(
+			'timeout' => 20,
+			'headers' => array(
+				'Authorization' => 'Bearer ' . $token,
+				'Content-Type'  => 'application/json',
+			),
+			'body'    => wp_json_encode( $body ),
+		)
+	);
+
+	if ( is_wp_error( $response ) ) {
+		return array( 'ok' => false, 'message' => 'No se pudo conectar con WhatsApp Cloud API.' );
+	}
+
+	$code = (int) wp_remote_retrieve_response_code( $response );
+	if ( $code >= 200 && $code < 300 ) {
+		return array( 'ok' => true, 'message' => 'Código enviado por WhatsApp.' );
+	}
+
+	return array( 'ok' => false, 'message' => 'WhatsApp Cloud API rechazó el envío.' );
+}
+
 function lp_ajax_descuento() {
 	check_ajax_referer( 'lp_nonce', 'nonce' );
 	if ( ! empty( $_POST['web'] ) ) {
@@ -581,13 +665,20 @@ function lp_ajax_descuento() {
 		wp_send_json_error( array( 'message' => 'No pudimos generar el código. Intenta de nuevo.' ) );
 	}
 
-	$vence = date_i18n( 'j \d\e F \d\e Y', $expira );
-	$msg   = 'Hola, soy ' . $nombre . '. Quiero usar mi código de descuento web ' . $codigo . ' (10 %, vence el ' . $vence . ').';
+	$vence         = date_i18n( 'j \d\e F \d\e Y', $expira );
+	$msg           = 'Hola, soy ' . $nombre . '. Quiero usar mi código de descuento web ' . $codigo . ' (10 %, vence el ' . $vence . ').';
+	$wa_send       = lp_wa_cloud_send_discount( $wa, $nombre, $codigo, $vence );
+	$sent_by_api   = ! empty( $wa_send['ok'] );
+	$api_configured = lp_wa_cloud_enabled();
+
 	wp_send_json_success(
 		array(
-			'codigo'       => $codigo,
-			'vence'        => $vence,
-			'whatsapp_url' => lp_wa_link( $msg ),
+			'codigo'        => $codigo,
+			'vence'         => $vence,
+			'whatsapp_url'  => lp_wa_link( $msg ),
+			'sent_by_api'   => $sent_by_api,
+			'api_configured' => $api_configured,
+			'send_message'  => isset( $wa_send['message'] ) ? $wa_send['message'] : '',
 		)
 	);
 }
