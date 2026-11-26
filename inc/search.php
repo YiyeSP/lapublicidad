@@ -124,6 +124,12 @@ function lp_search_include_cpts( $query ) {
 		return;
 	}
 	$query->set( 'post_type', array( 'post', 'page', 'lp_producto', 'lp_servicio', 'lp_trabajo' ) );
+	$front = (int) get_option( 'page_on_front' );
+	if ( $front > 0 ) {
+		$not_in   = (array) $query->get( 'post__not_in' );
+		$not_in[] = $front;
+		$query->set( 'post__not_in', array_values( array_unique( array_map( 'intval', $not_in ) ) ) );
+	}
 }
 add_action( 'pre_get_posts', 'lp_search_include_cpts' );
 
