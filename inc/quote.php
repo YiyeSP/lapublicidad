@@ -98,17 +98,60 @@ function lp_default_precios() {
 				array( 'id' => 'instalacion', 'nombre' => 'Instalación', 'valor' => 40000, 'tipo' => 'fijo' ),
 			),
 		),
-		'letras3d'     => array(
-			'nombre'     => 'Letras 3D',
-			'tipo'       => 'm2',
-			'minimo'     => 150000,
-			'limites'    => array( 20, 300 ),
-			'medidas'    => array(),
-			'materiales' => array(
+		'letras3d'       => array(
+			'nombre'          => 'Letras 3D',
+			'tipo'            => 'm2',
+			'minimo'          => 150000,
+			'limites'         => array( 20, 300 ),
+			'medidas'         => array(),
+			'materiales'      => array(
 				array( 'id' => 'acrilico3d', 'nombre' => 'Acrílico 3D', 'tarifa' => 1200000 ),
 			),
-			'diseno'     => false,
-			'acabados'   => array(),
+			'diseno'          => false,
+			'acabados'        => array(),
+		),
+		'marco_metalico' => array(
+			'nombre'          => 'Aviso con marco metálico',
+			'tipo'            => 'm2',
+			'minimo'          => 110000,
+			'limites'         => array( 50, 300 ),
+			'medidas'         => array( array( 100, 100 ), array( 150, 100 ), array( 200, 100 ) ),
+			'materiales'      => array(
+				array( 'id' => 'tubo34', 'nombre' => 'Tubo lámina de 3/4"', 'tarifa' => 110000 ),
+			),
+			'diseno'          => false,
+			'diseno_incluido' => true,
+			'acabados'        => array(),
+		),
+		'valla_lona'     => array(
+			'nombre'          => 'Valla publicitaria en lona',
+			'tipo'            => 'm2',
+			'minimo'          => 125000,
+			'limites'         => array( 100, 600 ),
+			'medidas'         => array( array( 200, 100 ), array( 300, 100 ), array( 400, 100 ) ),
+			'materiales'      => array(
+				array( 'id' => 'tubo1', 'nombre' => 'Tubo lámina de 1"', 'tarifa' => 125000 ),
+			),
+			'diseno'          => false,
+			'diseno_incluido' => true,
+			'acabados'        => array(
+				array( 'id' => 'cercha', 'nombre' => 'Cercha', 'valor' => 90000, 'tipo' => 'lineal' ),
+			),
+		),
+		'valla_lamina'   => array(
+			'nombre'          => 'Valla publicitaria en lámina',
+			'tipo'            => 'm2',
+			'minimo'          => 225000,
+			'limites'         => array( 100, 600 ),
+			'medidas'         => array( array( 200, 100 ), array( 300, 100 ), array( 400, 100 ) ),
+			'materiales'      => array(
+				array( 'id' => 'lamina', 'nombre' => 'Lámina publicitaria', 'tarifa' => 225000 ),
+			),
+			'diseno'          => false,
+			'diseno_incluido' => true,
+			'acabados'        => array(
+				array( 'id' => 'cercha', 'nombre' => 'Cercha', 'valor' => 90000, 'tipo' => 'lineal' ),
+			),
 		),
 	);
 }
@@ -255,6 +298,12 @@ function lp_calcular( $in ) {
 				$v = $a['valor'] * $cant;
 			} elseif ( 'm2' === $a['tipo'] ) {
 				$v = $a['valor'] * $area * $cant;
+			} elseif ( 'lineal' === $a['tipo'] ) {
+				$metros = 0;
+				if ( isset( $in['acabados_metros'][ $a['id'] ] ) ) {
+					$metros = max( 0, floatval( $in['acabados_metros'][ $a['id'] ] ) );
+				}
+				$v = $a['valor'] * $metros;
 			} else {
 				$v = $a['valor'];
 			}
@@ -317,13 +366,16 @@ function lp_cotizador_key_for_name( $name ) {
 		return '';
 	}
 	$map = array(
-		'pendon'       => array( 'pendon', 'porta pendon', 'roll up', 'roller', 'araña', 'arana' ),
-		'vinilo'       => array( 'vinilo', 'microperforado', 'adhesivo impreso' ),
-		'stickers'     => array( 'sticker', 'calcomania', 'etiqueta troquelada' ),
-		'pasacalle'    => array( 'pasacalle', 'valla', 'lona publicitaria', 'lamina publicitaria' ),
-		'cajaluminosa' => array( 'caja luminosa' ),
-		'neon'         => array( 'neon', 'neón', 'led neon', 'aviso led' ),
-		'letras3d'     => array( 'letra 3d', 'letras 3d', 'aviso 3d', 'corporeo', 'corpóreo' ),
+		'valla_lona'     => array( 'valla publicitaria en lona', 'valla en lona', 'lona publicitaria' ),
+		'valla_lamina'   => array( 'valla publicitaria en lamina', 'valla en lamina', 'lamina publicitaria' ),
+		'marco_metalico' => array( 'marco metalico', 'aviso con marco' ),
+		'pendon'         => array( 'pendon', 'porta pendon', 'roll up', 'roller', 'araña', 'arana' ),
+		'vinilo'         => array( 'vinilo', 'microperforado', 'adhesivo impreso' ),
+		'stickers'       => array( 'sticker', 'calcomania', 'etiqueta troquelada' ),
+		'pasacalle'      => array( 'pasacalle' ),
+		'cajaluminosa'   => array( 'caja luminosa' ),
+		'neon'           => array( 'neon', 'neón', 'led neon', 'aviso led' ),
+		'letras3d'       => array( 'letra 3d', 'letras 3d', 'aviso 3d', 'corporeo', 'corpóreo' ),
 	);
 	foreach ( $map as $key => $aliases ) {
 		foreach ( $aliases as $alias ) {

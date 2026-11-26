@@ -30,7 +30,9 @@
     fd.append('nonce', LPD.nonce);
     Object.keys(data).forEach(function (k) {
       var v = data[k];
-      if (Array.isArray(v)) { v.forEach(function (x) { fd.append(k + '[]', x); }); } else { fd.append(k, v); }
+      if (Array.isArray(v)) { v.forEach(function (x) { fd.append(k + '[]', x); }); }
+      else if (v && typeof v === 'object') { Object.keys(v).forEach(function (sk) { fd.append(k + '[' + sk + ']', v[sk]); }); }
+      else { fd.append(k, v); }
     });
     return fetch(LPD.ajax, { method: 'POST', body: fd, credentials: 'same-origin' }).then(function (r) { return r.json(); });
   }
@@ -67,7 +69,11 @@
     var ac = 0, det = [];
     (p.acabados || []).forEach(function (a) {
       if (s.acabados.indexOf(a.id) === -1) { return; }
-      var v = a.tipo === 'unidad' ? a.valor * cant : (a.tipo === 'm2' ? a.valor * area * cant : a.valor);
+      var v;
+      if (a.tipo === 'unidad') { v = a.valor * cant; }
+      else if (a.tipo === 'm2') { v = a.valor * area * cant; }
+      else if (a.tipo === 'lineal') { var ml = Math.max(0, parseFloat((s.acabadosMetros || {})[a.id]) || 0); v = a.valor * ml; }
+      else { v = a.valor; }
       ac += v; det.push({ nombre: a.nombre, valor: Math.round(v) });
     });
     return { ok: true, producto: p.nombre, medidas: w + ' × ' + h + ' cm', material: mat.nombre, diseno: dis, area: area, cantidad: cant,
@@ -208,7 +214,7 @@
     var keys = Object.keys(precios);
     if (!keys.length) { return; }
     var q = function (r) { return $('[data-role="' + r + '"]', root); };
-    var S = { key: keys[0], medida: 0, custom: false, ancho: '', alto: '', material: '', diseno: false, acabados: [], cantidad: 1, tab: 'rapida' };
+    var S = { key: keys[0], medida: 0, custom: false, ancho: '', alto: '', material: '', diseno: false, acabados: [], acabadosMetros: {}, cantidad: 1, tab: 'rapida' };
     var last = null;
     var secs = {
       medidas: $('[data-step="medidas"]', root), material: $('[data-step="material"]', root),
@@ -228,7 +234,7 @@
     }
     function select(k) {
       if (!precios[k]) { return; }
-      S.key = k; S.medida = 0; S.custom = false; S.ancho = ''; S.alto = ''; S.diseno = false; S.acabados = []; S.cantidad = 1;
+      S.key = k; S.medida = 0; S.custom = false; S.ancho = ''; S.alto = ''; S.diseno = false; S.acabados = []; S.acabadosMetros = {}; S.cantidad = 1;
       var p = precios[k];
       S.material = p.materiales ? p.materiales[0].id : '';
       if (p.medidas && p.medidas.length) { S.ancho = p.medidas[0][0]; S.alto = p.medidas[0][1]; } else { S.custom = true; }
@@ -287,12 +293,24 @@
       (p.acabados || []).forEach(function (a) {
         var lab = el('label', 'lap-check'), inp = document.createElement('input');
         inp.type = 'checkbox'; inp.value = a.id;
-        inp.addEventListener('change', function () {
-          S.acabados = $$('input:checked', ab).map(function (i) { return i.value; }); update();
-        });
         var span = el('span', '', a.nombre);
-        var unit = a.tipo === 'unidad' ? ' por unidad' : (a.tipo === 'm2' ? ' por m²' : ' (valor fijo)');
+        var unit = a.tipo === 'unidad' ? ' por unidad' : (a.tipo === 'm2' ? ' por m²' : (a.tipo === 'lineal' ? ' por metro lineal' : ' (valor fijo)'));
         span.appendChild(el('small', '', money(a.valor) + ' COP' + unit));
+        var mInp = null;
+        if (a.tipo === 'lineal') {
+          mInp = document.createElement('input');
+          mInp.type = 'number'; mInp.min = '0'; mInp.step = '0.1'; mInp.placeholder = 'Metros';
+          mInp.className = 'lap-acabado-metros';
+          mInp.value = S.acabadosMetros[a.id] || '';
+          mInp.addEventListener('input', function () { S.acabadosMetros[a.id] = mInp.value; update(); });
+          span.appendChild(mInp);
+        }
+        inp.addEventListener('change', function () {
+          S.acabados = $$('input:checked', ab).map(function (i) { return i.value; });
+          if (mInp) { mInp.disabled = !inp.checked; if (!inp.checked) { S.acabadosMetros[a.id] = ''; mInp.value = ''; } }
+          update();
+        });
+        if (mInp) { mInp.disabled = S.acabados.indexOf(a.id) === -1; }
         lab.appendChild(inp); lab.appendChild(span); ab.appendChild(lab);
       });
     }
@@ -368,7 +386,7 @@
       if (!last || !last.ok) { showErrors({ cotizacion: last ? last.error : 'Completa la cotización.' }); return; }
       var fd = new FormData(form), data = {
         producto: S.key, ancho: S.ancho, alto: S.alto, material: S.material, diseno: S.diseno ? '1' : '', acabados: S.acabados,
-        cantidad: S.cantidad, tipo: S.tab, nombre: fd.get('nombre') || '', whatsapp: fd.get('whatsapp') || '',
+        acabados_metros: S.acabadosMetros, cantidad: S.cantidad, tipo: S.tab, nombre: fd.get('nombre') || '', whatsapp: fd.get('whatsapp') || '',
         correo: fd.get('correo') || '', documento: fd.get('documento') || '', ciudad: fd.get('ciudad') || '',
         codigo: fd.get('codigo') || '', consent: fd.get('consent') ? '1' : '', web: fd.get('web') || ''
       };
