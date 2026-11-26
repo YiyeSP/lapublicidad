@@ -415,14 +415,19 @@
       window.print();
     });
 
+    function scrollToCotizador() {
+      var sec = root.closest('#cotizador') || document.getElementById('cotizador');
+      if (sec) { sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    }
     // preselección desde el carrusel o la URL (?producto=pendon)
-    window.addEventListener('lap:select-product', function (e) { select(e.detail); });
+    window.addEventListener('lap:select-product', function (e) { select(e.detail); scrollToCotizador(); });
     try {
       var pq = new URLSearchParams(window.location.search).get('producto');
       if (pq && precios[pq]) { S.key = pq; }
     } catch (e) { /* sin soporte */ }
     var saved = store('lap_codigo'); if (saved) { var ci = $('[name="codigo"]', form); if (ci) { ci.value = saved; } }
     select(S.key);
+    if (pq && precios[pq]) { setTimeout(scrollToCotizador, 50); }
   }
 
   /* ---------- Descuento web ---------- */

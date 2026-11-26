@@ -305,6 +305,37 @@ function lp_resumen_texto( $c ) {
 	return implode( "\n", $l );
 }
 
+/**
+ * Intenta mapear un nombre de producto/ítem a una clave del cotizador.
+ *
+ * @param string $name Nombre visible.
+ * @return string Clave de lp_get_precios() o '' si no hay coincidencia.
+ */
+function lp_cotizador_key_for_name( $name ) {
+	$name = strtolower( remove_accents( (string) $name ) );
+	if ( '' === $name ) {
+		return '';
+	}
+	$map = array(
+		'pendon'       => array( 'pendon', 'porta pendon', 'roll up', 'roller', 'araña', 'arana' ),
+		'vinilo'       => array( 'vinilo', 'microperforado', 'adhesivo impreso' ),
+		'stickers'     => array( 'sticker', 'calcomania', 'etiqueta troquelada' ),
+		'pasacalle'    => array( 'pasacalle', 'valla', 'lona publicitaria', 'lamina publicitaria' ),
+		'cajaluminosa' => array( 'caja luminosa' ),
+		'neon'         => array( 'neon', 'neón', 'led neon', 'aviso led' ),
+		'letras3d'     => array( 'letra 3d', 'letras 3d', 'aviso 3d', 'corporeo', 'corpóreo' ),
+	);
+	foreach ( $map as $key => $aliases ) {
+		foreach ( $aliases as $alias ) {
+			$a = strtolower( remove_accents( $alias ) );
+			if ( false !== strpos( $name, $a ) ) {
+				return $key;
+			}
+		}
+	}
+	return '';
+}
+
 /* =====================================================================
  * 3. BASE DE DATOS (tablas propias: cotizaciones y descuentos)
  * ===================================================================== */

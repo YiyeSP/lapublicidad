@@ -48,7 +48,11 @@ while ( have_posts() ) :
 								</span>
 								<span class="lap-card__body">
 									<h2><?php echo esc_html( $it['name'] ); ?></h2>
-									<a class="lap-btn lap-btn--green lap-btn--sm" href="<?php echo esc_url( home_url( '/#cotizador' ) ); ?>">Cotizar</a>
+									<?php
+									$lp_cot_key = function_exists( 'lp_cotizador_key_for_name' ) ? lp_cotizador_key_for_name( $it['name'] ) : '';
+									$lp_cot_url = $lp_cot_key ? add_query_arg( 'producto', $lp_cot_key, home_url( '/' ) ) . '#cotizador' : home_url( '/#cotizador' );
+									?>
+									<a class="lap-btn lap-btn--green lap-btn--sm" href="<?php echo esc_url( $lp_cot_url ); ?>">Cotizar</a>
 								</span>
 								</article>
 							</div>
