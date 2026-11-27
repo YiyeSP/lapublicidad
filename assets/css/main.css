@@ -335,19 +335,26 @@ a.lap-card:hover .lap-card__media img { transform: scale(1.05); }
 .lap-chips { list-style: none; margin: 24px 0 32px; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .lap-chips li { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 12px; background: #fff; border: 1px solid #DDE3F5; font: 600 14px var(--lp-display); color: #0A1033; }
 .lap-chips .dashicons { color: #2F5BFF; }
-.lap-why { margin-top: 96px; }
-.lap-why__card { padding: 24px; border-radius: 16px; background: #fff; border: 1px solid #DDE3F5; }
-.lap-why__card .dashicons { width: 36px; height: 36px; font-size: 28px; color: #2F5BFF; }
-.lap-why__card small { display: inline-block; margin: 8px 0; padding: 2px 10px; border-radius: 999px; background: #E6F0FF; color: #2F5BFF; font-weight: 600; font-size: 11px; }
-.lap-why__card h3 { font-size: 16px; margin-bottom: 8px; }
-.lap-why__card p { margin: 0; font-size: 14px; color: #5A6385; }
-.lap-banner { margin-top: 28px; padding: 20px 24px; border-radius: 16px; background: var(--lp-navy); color: #fff; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
-.lap-banner p { margin: 0; }
+.lap-why { margin-top: 0; }
+.lap-bg-navy .lap-why .lap-label { color: #A0F900; }
+.lap-bg-navy .lap-why .lap-h2 { color: #FFFFFF; }
+.lap-bg-navy .lap-why .lap-sub { color: #B8C1C8; max-width: 520px; margin-left: auto; margin-right: auto; }
+.lap-why__card { padding: 30px; border-radius: 20px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.12); }
+.lap-why__card .dashicons { width: 36px; height: 36px; font-size: 36px; color: #B8C1C8; display: block; margin-bottom: 14px; }
+.lap-why__card small { display: inline-block; margin: 0 0 12px; padding: 6px 12px; border-radius: 999px; background: rgba(160,249,0,.12); color: #A0F900; font-weight: 700; font-size: 12px; }
+.lap-why__card h3 { font-size: 20px; margin: 0 0 10px; color: #FFFFFF; font-family: var(--lp-display); }
+.lap-why__card p { margin: 0; font-size: 15px; line-height: 1.7; color: #B8C1C8; }
+.lap-banner { margin-top: 40px; padding: 28px 32px; border-radius: 20px; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.12); color: #fff; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+.lap-banner__icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(160,249,0,.12); color: #A0F900; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 52px; }
+.lap-banner__icon .dashicons { width: 24px; height: 24px; font-size: 24px; color: #A0F900; }
+.lap-banner p { margin: 0; flex: 1; min-width: 220px; font-size: 16px; line-height: 1.5; color: #FFFFFF; }
+.lap-banner p strong { color: #FFFFFF; font-weight: 700; }
 .lap-banner span { color: var(--lp-green); font-weight: 700; }
-.lap-banner small { display: block; color: var(--lp-soft); }
-.lap-quote { margin: 20px 0 0; padding: 20px 24px; border-radius: 16px; background: #fff; border: 1px solid #DDE3F5; color: #0A1033; }
-.lap-quote blockquote { margin: 0 0 6px; }
-.lap-quote figcaption { color: #5A6385; font-size: 13px; }
+.lap-banner small { display: block; margin-top: 6px; color: #B8C1C8; font-size: 14px; font-weight: 400; }
+.lap-quote { margin: 28px 0 0; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.12); color: #FFFFFF; text-align: center; }
+.lap-quote blockquote { margin: 0 0 10px; font-size: 18px; line-height: 1.6; }
+.lap-quote figcaption { color: #A0F900; font-size: 14px; font-weight: 700; font-family: var(--lp-display); }
+@media (max-width: 767px) { .lap-banner { flex-direction: column; align-items: stretch; } .lap-banner .lap-btn { width: 100%; text-align: center; } }
 .lap-ally { padding: 24px; border-radius: 16px; background: #fff; border: 1px solid #DDE3F5; }
 .lap-ally .dashicons { width: 32px; height: 32px; font-size: 28px; color: #0A1033; }
 .lap-ally h3 { margin: 10px 0 8px; font-size: 18px; }

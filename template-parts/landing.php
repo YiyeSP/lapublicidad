@@ -65,8 +65,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</section>
 
-	<!-- 5. NOSOTROS: emprendedores + por qué elegirnos -->
-	<section id="nosotros" class="lap-section lap-bg-light" aria-labelledby="lap-emp-title">
+	<!-- 5. NOSOTROS: emprendedores -->
+	<section id="emprendedores" class="lap-section lap-bg-light" aria-labelledby="lap-emp-title">
 		<div class="lap-container lap-split">
 			<div class="lap-collage" aria-hidden="true">
 				<img src="<?php echo esc_url( lp_asset( 'img/catalogo/stickers.webp' ) ); ?>" alt="" loading="lazy">
@@ -89,26 +89,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<a class="lap-btn lap-btn--green" href="#cotizador">Cotizar mi proyecto →</a>
 			</div>
 		</div>
+	</section>
 
+	<!-- 5b. NOSOTROS: por qué elegirnos -->
+	<section id="nosotros" class="lap-section lap-bg-navy" aria-labelledby="lap-nosotros-title">
 		<div class="lap-container lap-why">
 			<header class="lap-head">
-				<p class="lap-label lap-label--blue">Nuestra diferencia</p>
-				<h2 class="lap-h2">¿Por qué elegirnos?</h2>
+				<p class="lap-label">Nuestra diferencia</p>
+				<h2 id="lap-nosotros-title" class="lap-h2">¿Por qué elegirnos?</h2>
+				<p class="lap-sub">Llevamos años siendo el aliado publicitario de empresas y emprendedores en Putumayo.</p>
 			</header>
-			<?php /* Rejilla Bootstrap 5.3.3 (grid), manteniendo estilos de tarjeta del tema. */ ?>
 			<div class="row g-4">
 				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-groups" aria-hidden="true"></span><small>Trato directo</small><h3>Atención personalizada</h3><p>Te ayudamos a elegir la solución que realmente necesitas, sin tecnicismos ni presión.</p></article></div>
-				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-awards" aria-hidden="true"></span><small>Alta resolución</small><h3>Calidad de impresión</h3><p>Equipos de gran formato y materiales duraderos para que tu marca se vea profesional.</p></article></div>
+				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-printer" aria-hidden="true"></span><small>Alta resolución</small><h3>Calidad de impresión</h3><p>Soluciones pensadas para que tu marca se vea profesional, sin importar el tamaño del pedido.</p></article></div>
 				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-store" aria-hidden="true"></span><small>Cualquier escala</small><h3>Para empresas y emprendedores</h3><p>Opciones para negocios grandes, pequeños y personas que están comenzando su marca.</p></article></div>
 				<div class="col-12 col-sm-6 col-xl-3"><article class="lap-why__card"><span class="dashicons dashicons-admin-tools" aria-hidden="true"></span><small>Servicio completo</small><h3>Instalación y montaje</h3><p>También ofrecemos apoyo para llevar la solución hasta el lugar donde se necesita.</p></article></div>
 			</div>
 			<div class="lap-banner">
+				<span class="lap-banner__icon" aria-hidden="true"><span class="dashicons dashicons-lightbulb"></span></span>
 				<p><strong>No necesitas saber de publicidad.</strong> <span>Nosotros te ayudamos a elegir.</span><small>Cuéntanos qué necesitas y te orientamos sin costo adicional.</small></p>
 				<a class="lap-btn lap-btn--green lap-btn--sm" href="<?php echo esc_url( lp_wa_link( 'Hola, necesito asesoría para elegir.' ) ); ?>" target="_blank" rel="noopener">Hablar con un asesor</a>
 			</div>
 			<figure class="lap-quote">
-				<blockquote>Texto de ejemplo: reemplazar por la opinión real de un cliente.</blockquote>
-				<figcaption>— Nombre del cliente</figcaption>
+				<blockquote>“Más que un diseño, me asesoraron en todo lo relacionado con la publicidad de mi negocio.”</blockquote>
+				<figcaption>— MaFé</figcaption>
 			</figure>
 		</div>
 	</section>

@@ -1,0 +1,437 @@
+{
+  "content": [
+    {
+      "id": "218a8e1",
+      "elements": [
+        {
+          "id": "0770a04",
+          "elements": [
+            {
+              "id": "dd885d2",
+              "elements": [
+                {
+                  "id": "6a17a41",
+                  "elements": [],
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Nuestra diferencia</p>",
+                    "_css_classes": "lp-label"
+                  }
+                },
+                {
+                  "id": "3e5c137",
+                  "elements": [],
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "¿Por qué elegirnos?",
+                    "header_size": "h2",
+                    "_css_classes": "lp-h2"
+                  }
+                },
+                {
+                  "id": "750dc24",
+                  "elements": [],
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Llevamos años siendo el aliado publicitario de empresas y emprendedores en Putumayo.</p>",
+                    "_css_classes": "lp-sub"
+                  }
+                }
+              ],
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-sec-head"
+              }
+            },
+            {
+              "id": "f13930b",
+              "elements": [
+                {
+                  "id": "745b30c",
+                  "elements": [
+                    {
+                      "id": "1141f89",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-handshake",
+                          "library": "fa-solid"
+                        },
+                        "size": {
+                          "unit": "px",
+                          "size": 36,
+                          "size_tablet": 36,
+                          "size_mobile": 36
+                        },
+                        "primary_color": "#B8C1C8",
+                        "_css_classes": "lp-why-card__icon"
+                      }
+                    },
+                    {
+                      "id": "907d220",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Trato directo</p>",
+                        "_css_classes": "lp-why-card__tag"
+                      }
+                    },
+                    {
+                      "id": "8851dc1",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Atención personalizada",
+                        "header_size": "h3",
+                        "_css_classes": "lp-why-card__title"
+                      }
+                    },
+                    {
+                      "id": "9db9050",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Te ayudamos a elegir la solución que realmente necesitas, sin tecnicismos ni presión.</p>",
+                        "_css_classes": "lp-why-card__desc"
+                      }
+                    }
+                  ],
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-why-card"
+                  }
+                },
+                {
+                  "id": "96bc4b0",
+                  "elements": [
+                    {
+                      "id": "ed9afa0",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-print",
+                          "library": "fa-solid"
+                        },
+                        "size": {
+                          "unit": "px",
+                          "size": 36,
+                          "size_tablet": 36,
+                          "size_mobile": 36
+                        },
+                        "primary_color": "#B8C1C8",
+                        "_css_classes": "lp-why-card__icon"
+                      }
+                    },
+                    {
+                      "id": "25bac57",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Alta resolución</p>",
+                        "_css_classes": "lp-why-card__tag"
+                      }
+                    },
+                    {
+                      "id": "21b4a1d",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Calidad de impresión",
+                        "header_size": "h3",
+                        "_css_classes": "lp-why-card__title"
+                      }
+                    },
+                    {
+                      "id": "3209226",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Soluciones pensadas para que tu marca se vea profesional, sin importar el tamaño del pedido.</p>",
+                        "_css_classes": "lp-why-card__desc"
+                      }
+                    }
+                  ],
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-why-card"
+                  }
+                },
+                {
+                  "id": "9a4c4ab",
+                  "elements": [
+                    {
+                      "id": "688e719",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-store",
+                          "library": "fa-solid"
+                        },
+                        "size": {
+                          "unit": "px",
+                          "size": 36,
+                          "size_tablet": 36,
+                          "size_mobile": 36
+                        },
+                        "primary_color": "#B8C1C8",
+                        "_css_classes": "lp-why-card__icon"
+                      }
+                    },
+                    {
+                      "id": "f292241",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Cualquier escala</p>",
+                        "_css_classes": "lp-why-card__tag"
+                      }
+                    },
+                    {
+                      "id": "75295bd",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Para empresas y emprendedores",
+                        "header_size": "h3",
+                        "_css_classes": "lp-why-card__title"
+                      }
+                    },
+                    {
+                      "id": "b480f46",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Opciones para negocios grandes, pequeños y personas que están comenzando su marca.</p>",
+                        "_css_classes": "lp-why-card__desc"
+                      }
+                    }
+                  ],
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-why-card"
+                  }
+                },
+                {
+                  "id": "ef409b7",
+                  "elements": [
+                    {
+                      "id": "a9a9890",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-wrench",
+                          "library": "fa-solid"
+                        },
+                        "size": {
+                          "unit": "px",
+                          "size": 36,
+                          "size_tablet": 36,
+                          "size_mobile": 36
+                        },
+                        "primary_color": "#B8C1C8",
+                        "_css_classes": "lp-why-card__icon"
+                      }
+                    },
+                    {
+                      "id": "17d9164",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Servicio completo</p>",
+                        "_css_classes": "lp-why-card__tag"
+                      }
+                    },
+                    {
+                      "id": "d8f6d0c",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Instalación y montaje",
+                        "header_size": "h3",
+                        "_css_classes": "lp-why-card__title"
+                      }
+                    },
+                    {
+                      "id": "8d4bee8",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>También ofrecemos apoyo para llevar la solución hasta el lugar donde se necesita.</p>",
+                        "_css_classes": "lp-why-card__desc"
+                      }
+                    }
+                  ],
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "css_classes": "lp-why-card"
+                  }
+                }
+              ],
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "css_classes": "lp-why-grid"
+              }
+            },
+            {
+              "id": "23d6a96",
+              "elements": [
+                {
+                  "id": "b9dfecb",
+                  "elements": [
+                    {
+                      "id": "9f10316",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-lightbulb",
+                          "library": "fa-solid"
+                        },
+                        "size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "primary_color": "#A0F900",
+                        "_css_classes": "lp-why-band__icon"
+                      }
+                    },
+                    {
+                      "id": "54cb873",
+                      "elements": [
+                        {
+                          "id": "7d31b82",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p><strong class=\"lp-why-band__white\">No necesitas saber de publicidad.</strong> <strong class=\"lp-why-band__green\">Nosotros te ayudamos a elegir.</strong></p>"
+                          }
+                        },
+                        {
+                          "id": "b14c58a",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p class=\"lp-why-band__sub\">Cuéntanos qué necesitas y te orientamos sin costo adicional.</p>"
+                          }
+                        }
+                      ],
+                      "elType": "container",
+                      "settings": {
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-why-band__text"
+                      }
+                    }
+                  ],
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "css_classes": "lp-why-band__left"
+                  }
+                },
+                {
+                  "id": "298aab8",
+                  "elements": [],
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Hablar con un asesor",
+                    "link": {
+                      "url": "https://wa.me/573105784288?text=Hola%2C%20necesito%20asesor%C3%ADa%20para%20elegir.",
+                      "is_external": "on",
+                      "nofollow": ""
+                    },
+                    "size": "md",
+                    "_css_classes": "lp-why-band__btn"
+                  }
+                }
+              ],
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "css_classes": "lp-why-band"
+              }
+            },
+            {
+              "id": "2998ee0",
+              "elements": [
+                {
+                  "id": "08bc300",
+                  "elements": [],
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<blockquote class=\"lp-why-quote__text\">“Más que un diseño, me asesoraron en todo lo relacionado con la publicidad de mi negocio.”</blockquote><p class=\"lp-why-quote__author\">— MaFé</p>"
+                  }
+                }
+              ],
+              "elType": "container",
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-why-quote"
+              }
+            }
+          ],
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "css_classes": "lp-wrap"
+          }
+        }
+      ],
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-section lp-navy lp-why",
+        "_element_id": "nosotros"
+      }
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Nosotros - Por que elegirnos",
+  "type": "section"
+}
