@@ -210,7 +210,7 @@ function lp_sc_cotizador() {
 	?>
 	<div class="lap-cot" data-lap-cotizador>
 		<div class="lap-cot__main">
-			<section class="lap-panel" data-step="producto"><h3><span>1.</span> Producto</h3><div class="lap-opts" data-role="productos"></div></section>
+			<section class="lap-panel" data-step="producto"><h3><span>1.</span> Producto</h3><div class="lap-opts" data-role="productos"></div><button type="button" class="lap-more-products" data-role="mas-productos" hidden>Ver más productos</button></section>
 			<section class="lap-panel" data-step="medidas"><h3><span>2.</span> Medidas</h3>
 				<div class="lap-opts" data-role="medidas"></div>
 				<div class="lap-custom" data-role="custom" hidden>
@@ -240,6 +240,12 @@ function lp_sc_cotizador() {
 				<div class="lap-tabs" role="tablist" aria-label="Tipo de cotización">
 					<button type="button" role="tab" aria-selected="true" data-tab="rapida">Rápida</button>
 					<button type="button" role="tab" aria-selected="false" data-tab="formal">Formal</button>
+				</div>
+
+				<div class="lap-help-cta">
+					<p class="lap-help-cta__title">¿No sabes qué material o medida elegir?</p>
+					<p class="lap-help-cta__text">No te preocupes. Cuéntanos qué necesitas y te ayudamos a encontrar la mejor opción.</p>
+					<a class="lap-btn lap-btn--outline lap-btn--block" href="<?php echo esc_url( lp_wa_link( 'Hola, necesito asesoría para cotizar un producto de LA PUBLICIDAD. ¿Me pueden orientar?' ) ); ?>" target="_blank" rel="noopener">Recibir asesoría por WhatsApp</a>
 				</div>
 
 				<form class="lap-form" data-role="form" novalidate>

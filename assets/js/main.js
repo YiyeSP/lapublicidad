@@ -40,6 +40,11 @@
   /* ---------- Cálculo (mismo orden de operaciones que lp_calcular en PHP) ---------- */
   function calc(p, s) {
     var cant = Math.max(1, Math.min(1000, parseInt(s.cantidad, 10) || 1));
+    if (p.revision || p.modo === 'revision') {
+      return { ok: true, revision: true, producto: p.nombre, medidas: '', material: '', diseno: false, area: 0, cantidad: cant,
+        impresion: 0, minimoAplicado: false, pct: 0, descVol: 0, acabados: 0, acabadosDet: [], total: 0,
+        mensaje: 'Este producto requiere revisión técnica. Solicita una cotización personalizada.' };
+    }
     if (p.tipo === 'paquete') {
       var t = Math.round(p.precio * cant);
       return { ok: true, producto: p.nombre, medidas: p.descripcion || '', material: '', diseno: false, area: 0, cantidad: cant,
@@ -214,7 +219,7 @@
     var keys = Object.keys(precios);
     if (!keys.length) { return; }
     var q = function (r) { return $('[data-role="' + r + '"]', root); };
-    var S = { key: keys[0], medida: 0, custom: false, ancho: '', alto: '', material: '', diseno: false, acabados: [], acabadosMetros: {}, cantidad: 1, tab: 'rapida' };
+    var S = { key: keys[0], medida: 0, custom: false, ancho: '', alto: '', material: '', diseno: false, acabados: [], acabadosMetros: {}, cantidad: 1, tab: 'rapida', showAllProducts: false };
     var last = null;
     var secs = {
       medidas: $('[data-step="medidas"]', root), material: $('[data-step="material"]', root),
@@ -223,14 +228,27 @@
 
     function prod() { return precios[S.key]; }
 
+    var moreBtn = q('mas-productos');
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function () { S.showAllProducts = !S.showAllProducts; buildProductos(); });
+    }
     function buildProductos() {
       var box = q('productos'); box.textContent = '';
-      keys.forEach(function (k) {
+      var limit = 6;
+      var showAll = !!S.showAllProducts;
+      keys.forEach(function (k, i) {
+        if (!showAll && i >= limit && k !== S.key) { return; }
         var b = el('button', 'lap-opt', precios[k].nombre);
         b.type = 'button'; b.setAttribute('aria-pressed', k === S.key ? 'true' : 'false');
         b.addEventListener('click', function () { select(k); });
         box.appendChild(b);
       });
+      var more = q('mas-productos');
+      if (more) {
+        var needsToggle = keys.length > limit;
+        more.hidden = !needsToggle;
+        more.textContent = showAll ? 'Ver menos productos' : 'Ver más productos';
+      }
     }
     function select(k) {
       if (!precios[k]) { return; }
@@ -242,11 +260,12 @@
       buildProductos(); buildStep(); update();
     }
     function buildStep() {
-      var p = prod(), pack = p.tipo === 'paquete';
-      secs.medidas.hidden = pack;
-      secs.material.hidden = pack || !p.materiales || !p.materiales.length;
-      secs.diseno.hidden = pack || (!p.diseno && !p.diseno_incluido);
-      secs.acabados.hidden = pack || !p.acabados || !p.acabados.length;
+      var p = prod(), pack = p.tipo === 'paquete', rev = !!(p.revision || p.modo === 'revision');
+      secs.medidas.hidden = pack || rev;
+      secs.material.hidden = pack || rev || !p.materiales || !p.materiales.length;
+      secs.diseno.hidden = pack || rev || (!p.diseno && !p.diseno_incluido);
+      secs.acabados.hidden = pack || rev || !p.acabados || !p.acabados.length;
+      if (rev) { q('nota').textContent = 'Este producto requiere revisión técnica. Solicita una cotización personalizada.'; }
 
       // medidas
       var mb = q('medidas'); mb.textContent = '';
@@ -333,6 +352,15 @@
         err.textContent = r.error; err.hidden = false;
         q('total').textContent = '$0'; q('total-ref').textContent = '';
         row('Producto', p.nombre);
+      } else if (r.revision) {
+        err.hidden = true;
+        row('Producto', r.producto);
+        row('Cantidad', String(r.cantidad));
+        row('Estado', 'Requiere revisión técnica');
+        q('total').textContent = 'A cotizar';
+        q('total-ref').textContent = 'Valor por confirmar';
+        q('nota').textContent = r.mensaje || 'Este producto requiere revisión técnica. Solicita una cotización personalizada.';
+        var eb = q('enviar'); if (eb) { eb.textContent = 'Solicitar cotización personalizada por WhatsApp'; }
       } else {
         err.hidden = true;
         row('Producto', r.producto);
@@ -346,8 +374,9 @@
         r.acabadosDet.forEach(function (a) { row(a.nombre, money(a.valor) + ' COP'); });
         q('total').textContent = money(r.total) + ' COP';
         q('total-ref').textContent = 'Valor de referencia';
+        q('nota').textContent = 'Precios en COP, vigentes para ' + (LPD.vigencia || '') + '. Precio sujeto a verificación por un asesor antes de producir.';
+        var eb2 = q('enviar'); if (eb2) { eb2.textContent = 'Solicitar cotización por WhatsApp'; }
       }
-      q('nota').textContent = 'Precios en COP, vigentes para ' + (LPD.vigencia || '') + '. Precio sujeto a verificación por un asesor antes de producir.';
     }
 
     // eventos de los campos
@@ -441,7 +470,7 @@
     window.addEventListener('lap:select-product', function (e) { select(e.detail); scrollToCotizador(); });
     try {
       var pq = new URLSearchParams(window.location.search).get('producto');
-      if (pq && precios[pq]) { S.key = pq; }
+      if (pq && precios[pq]) { S.key = pq; if (keys.indexOf(pq) >= 6) { S.showAllProducts = true; } }
     } catch (e) { /* sin soporte */ }
     var saved = store('lap_codigo'); if (saved) { var ci = $('[name="codigo"]', form); if (ci) { ci.value = saved; } }
     select(S.key);

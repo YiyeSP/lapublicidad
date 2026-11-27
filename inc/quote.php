@@ -184,6 +184,9 @@ function lp_validate_precios( $arr ) {
 			}
 			continue;
 		}
+		if ( ! empty( $p['revision'] ) || ( isset( $p['modo'] ) && 'revision' === $p['modo'] ) ) {
+			continue;
+		}
 		if ( ! isset( $p['minimo'] ) || ! is_numeric( $p['minimo'] ) ) {
 			return 'El producto "' . $key . '" necesita un "minimo" numérico.';
 		}
@@ -224,6 +227,27 @@ function lp_calcular( $in ) {
 	$p    = $precios[ $key ];
 	$cant = isset( $in['cantidad'] ) ? intval( $in['cantidad'] ) : 1;
 	$cant = max( 1, min( 1000, $cant ) );
+
+	if ( ! empty( $p['revision'] ) || ( isset( $p['modo'] ) && 'revision' === $p['modo'] ) ) {
+		return array(
+			'ok'              => true,
+			'revision'        => true,
+			'producto'        => $p['nombre'],
+			'medidas'         => '',
+			'material'        => '',
+			'diseno'          => false,
+			'area'            => 0,
+			'cantidad'        => $cant,
+			'impresion'       => 0,
+			'minimo_aplicado' => false,
+			'pct_vol'         => 0,
+			'desc_vol'        => 0,
+			'acabados'        => 0,
+			'acabados_det'    => array(),
+			'total'           => 0,
+			'mensaje'         => 'Este producto requiere revisión técnica. Solicita una cotización personalizada.',
+		);
+	}
 
 	if ( isset( $p['tipo'] ) && 'paquete' === $p['tipo'] ) {
 		$t = (int) round( $p['precio'] * $cant );
@@ -335,6 +359,9 @@ function lp_calcular( $in ) {
 function lp_resumen_texto( $c ) {
 	$l   = array();
 	$l[] = 'Producto: ' . $c['producto'];
+	if ( ! empty( $c['revision'] ) ) {
+		$l[] = 'Estado: Requiere revisión técnica (cotización personalizada)';
+	}
 	if ( ! empty( $c['medidas'] ) ) {
 		$l[] = 'Medidas: ' . $c['medidas'];
 	}
@@ -577,7 +604,11 @@ function lp_ajax_guardar() {
 	}
 
 	$msg  = 'Hola, soy ' . $nombre . '. Solicito cotización ' . ( 'formal' === $tipo ? 'formal ' : '' ) . '#' . $id . " de LA PUBLICIDAD:\n" . $resumen . "\n";
-	$msg .= 'Total estimado: ' . lp_money( $total ) . ' COP (precio sujeto a verificación).';
+	if ( ! empty( $calc['revision'] ) ) {
+		$msg .= 'Valor: pendiente de revisión técnica por un asesor.';
+	} else {
+		$msg .= 'Total estimado: ' . lp_money( $total ) . ' COP (precio sujeto a verificación).';
+	}
 	if ( $row ) {
 		$msg .= "\nCódigo de descuento web aplicado: " . $codigo . ' (10 %).';
 	}
