@@ -344,7 +344,7 @@ a.lap-card:hover .lap-card__media img { transform: scale(1.05); }
 .lap-why__card .dashicons { width: 20px; height: 20px; font-size: 20px; color: #FFFFFF; flex: 0 0 20px; margin-top: 2px; }
 .lap-why__card__body { min-width: 0; }
 .lap-why__card small { display: block; margin: 0 0 4px; padding: 0; background: transparent; color: #A0F900; font-weight: 700; font-size: 11px; }
-.lap-why__card h3 { font-size: 15px; margin: 0 0 6px; color: #FFFFFF; font-family: var(--lp-display); font-weight: 700; }
+.lap-why__card h3 { font-size: 16px; margin: 0 0 6px; color: #FFFFFF; font-family: var(--lp-display); font-weight: 700; }
 .lap-why__card p { margin: 0; font-size: 13px; line-height: 1.5; color: #B8C1C8; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .lap-banner { margin-top: 32px; padding: 20px 24px; border-radius: 16px; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.12); color: #fff; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
 .lap-banner__icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(160,249,0,.12); color: #A0F900; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; }
