@@ -1,16 +1,16 @@
 {
   "content": [
     {
-      "id": "218a8e1",
+      "id": "43a2224",
       "elements": [
         {
-          "id": "0770a04",
+          "id": "d353f49",
           "elements": [
             {
-              "id": "dd885d2",
+              "id": "5eca58c",
               "elements": [
                 {
-                  "id": "6a17a41",
+                  "id": "385a3d1",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "text-editor",
@@ -20,7 +20,7 @@
                   }
                 },
                 {
-                  "id": "3e5c137",
+                  "id": "dd2bec9",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "heading",
@@ -31,7 +31,7 @@
                   }
                 },
                 {
-                  "id": "750dc24",
+                  "id": "e0796a0",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "text-editor",
@@ -49,13 +49,13 @@
               }
             },
             {
-              "id": "f13930b",
+              "id": "753f0f9",
               "elements": [
                 {
-                  "id": "745b30c",
+                  "id": "78f3b8a",
                   "elements": [
                     {
-                      "id": "1141f89",
+                      "id": "a8c968a",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -66,58 +66,69 @@
                         },
                         "size": {
                           "unit": "px",
-                          "size": 36,
-                          "size_tablet": 36,
-                          "size_mobile": 36
+                          "size": 20,
+                          "size_tablet": 20,
+                          "size_mobile": 20
                         },
-                        "primary_color": "#B8C1C8",
+                        "primary_color": "#FFFFFF",
                         "_css_classes": "lp-why-card__icon"
                       }
                     },
                     {
-                      "id": "907d220",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "text-editor",
+                      "id": "1519cb9",
+                      "elements": [
+                        {
+                          "id": "45e5459",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Trato directo</p>",
+                            "_css_classes": "lp-why-card__tag"
+                          }
+                        },
+                        {
+                          "id": "e257501",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Atención personalizada",
+                            "header_size": "h3",
+                            "_css_classes": "lp-why-card__title"
+                          }
+                        },
+                        {
+                          "id": "3ae93b3",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Te ayudamos a elegir la solución que realmente necesitas, sin tecnicismos ni presión.</p>",
+                            "_css_classes": "lp-why-card__desc"
+                          }
+                        }
+                      ],
+                      "elType": "container",
                       "settings": {
-                        "editor": "<p>Trato directo</p>",
-                        "_css_classes": "lp-why-card__tag"
-                      }
-                    },
-                    {
-                      "id": "8851dc1",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "Atención personalizada",
-                        "header_size": "h3",
-                        "_css_classes": "lp-why-card__title"
-                      }
-                    },
-                    {
-                      "id": "9db9050",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "settings": {
-                        "editor": "<p>Te ayudamos a elegir la solución que realmente necesitas, sin tecnicismos ni presión.</p>",
-                        "_css_classes": "lp-why-card__desc"
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-why-card__body"
                       }
                     }
                   ],
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
-                    "flex_direction": "column",
+                    "flex_direction": "row",
                     "css_classes": "lp-why-card"
                   }
                 },
                 {
-                  "id": "96bc4b0",
+                  "id": "c62bda5",
                   "elements": [
                     {
-                      "id": "ed9afa0",
+                      "id": "4cfb164",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -128,58 +139,69 @@
                         },
                         "size": {
                           "unit": "px",
-                          "size": 36,
-                          "size_tablet": 36,
-                          "size_mobile": 36
+                          "size": 20,
+                          "size_tablet": 20,
+                          "size_mobile": 20
                         },
-                        "primary_color": "#B8C1C8",
+                        "primary_color": "#FFFFFF",
                         "_css_classes": "lp-why-card__icon"
                       }
                     },
                     {
-                      "id": "25bac57",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "text-editor",
+                      "id": "66198e9",
+                      "elements": [
+                        {
+                          "id": "72c1248",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Alta resolución</p>",
+                            "_css_classes": "lp-why-card__tag"
+                          }
+                        },
+                        {
+                          "id": "a65eb93",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Calidad de impresión",
+                            "header_size": "h3",
+                            "_css_classes": "lp-why-card__title"
+                          }
+                        },
+                        {
+                          "id": "88c7d2b",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Soluciones pensadas para que tu marca se vea profesional, sin importar el tamaño del pedido.</p>",
+                            "_css_classes": "lp-why-card__desc"
+                          }
+                        }
+                      ],
+                      "elType": "container",
                       "settings": {
-                        "editor": "<p>Alta resolución</p>",
-                        "_css_classes": "lp-why-card__tag"
-                      }
-                    },
-                    {
-                      "id": "21b4a1d",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "Calidad de impresión",
-                        "header_size": "h3",
-                        "_css_classes": "lp-why-card__title"
-                      }
-                    },
-                    {
-                      "id": "3209226",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "settings": {
-                        "editor": "<p>Soluciones pensadas para que tu marca se vea profesional, sin importar el tamaño del pedido.</p>",
-                        "_css_classes": "lp-why-card__desc"
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-why-card__body"
                       }
                     }
                   ],
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
-                    "flex_direction": "column",
+                    "flex_direction": "row",
                     "css_classes": "lp-why-card"
                   }
                 },
                 {
-                  "id": "9a4c4ab",
+                  "id": "54f443f",
                   "elements": [
                     {
-                      "id": "688e719",
+                      "id": "c1d206c",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -190,58 +212,69 @@
                         },
                         "size": {
                           "unit": "px",
-                          "size": 36,
-                          "size_tablet": 36,
-                          "size_mobile": 36
+                          "size": 20,
+                          "size_tablet": 20,
+                          "size_mobile": 20
                         },
-                        "primary_color": "#B8C1C8",
+                        "primary_color": "#FFFFFF",
                         "_css_classes": "lp-why-card__icon"
                       }
                     },
                     {
-                      "id": "f292241",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "text-editor",
+                      "id": "36e1fea",
+                      "elements": [
+                        {
+                          "id": "80313b0",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Cualquier escala</p>",
+                            "_css_classes": "lp-why-card__tag"
+                          }
+                        },
+                        {
+                          "id": "f8d3db7",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Para empresas y emprendedores",
+                            "header_size": "h3",
+                            "_css_classes": "lp-why-card__title"
+                          }
+                        },
+                        {
+                          "id": "9c8d09c",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Opciones para negocios grandes, pequeños y personas que están comenzando su marca.</p>",
+                            "_css_classes": "lp-why-card__desc"
+                          }
+                        }
+                      ],
+                      "elType": "container",
                       "settings": {
-                        "editor": "<p>Cualquier escala</p>",
-                        "_css_classes": "lp-why-card__tag"
-                      }
-                    },
-                    {
-                      "id": "75295bd",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "Para empresas y emprendedores",
-                        "header_size": "h3",
-                        "_css_classes": "lp-why-card__title"
-                      }
-                    },
-                    {
-                      "id": "b480f46",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "settings": {
-                        "editor": "<p>Opciones para negocios grandes, pequeños y personas que están comenzando su marca.</p>",
-                        "_css_classes": "lp-why-card__desc"
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-why-card__body"
                       }
                     }
                   ],
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
-                    "flex_direction": "column",
+                    "flex_direction": "row",
                     "css_classes": "lp-why-card"
                   }
                 },
                 {
-                  "id": "ef409b7",
+                  "id": "ac6a3d4",
                   "elements": [
                     {
-                      "id": "a9a9890",
+                      "id": "56f06a6",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -252,50 +285,61 @@
                         },
                         "size": {
                           "unit": "px",
-                          "size": 36,
-                          "size_tablet": 36,
-                          "size_mobile": 36
+                          "size": 20,
+                          "size_tablet": 20,
+                          "size_mobile": 20
                         },
-                        "primary_color": "#B8C1C8",
+                        "primary_color": "#FFFFFF",
                         "_css_classes": "lp-why-card__icon"
                       }
                     },
                     {
-                      "id": "17d9164",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "text-editor",
+                      "id": "1a29c97",
+                      "elements": [
+                        {
+                          "id": "4df8029",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Servicio completo</p>",
+                            "_css_classes": "lp-why-card__tag"
+                          }
+                        },
+                        {
+                          "id": "b4c7f15",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Instalación y montaje",
+                            "header_size": "h3",
+                            "_css_classes": "lp-why-card__title"
+                          }
+                        },
+                        {
+                          "id": "168cd3d",
+                          "elements": [],
+                          "elType": "widget",
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>También ofrecemos apoyo para llevar la solución hasta el lugar donde se necesita.</p>",
+                            "_css_classes": "lp-why-card__desc"
+                          }
+                        }
+                      ],
+                      "elType": "container",
                       "settings": {
-                        "editor": "<p>Servicio completo</p>",
-                        "_css_classes": "lp-why-card__tag"
-                      }
-                    },
-                    {
-                      "id": "d8f6d0c",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "Instalación y montaje",
-                        "header_size": "h3",
-                        "_css_classes": "lp-why-card__title"
-                      }
-                    },
-                    {
-                      "id": "8d4bee8",
-                      "elements": [],
-                      "elType": "widget",
-                      "widgetType": "text-editor",
-                      "settings": {
-                        "editor": "<p>También ofrecemos apoyo para llevar la solución hasta el lugar donde se necesita.</p>",
-                        "_css_classes": "lp-why-card__desc"
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "css_classes": "lp-why-card__body"
                       }
                     }
                   ],
                   "elType": "container",
                   "settings": {
                     "content_width": "full",
-                    "flex_direction": "column",
+                    "flex_direction": "row",
                     "css_classes": "lp-why-card"
                   }
                 }
@@ -308,13 +352,13 @@
               }
             },
             {
-              "id": "23d6a96",
+              "id": "54b4178",
               "elements": [
                 {
-                  "id": "b9dfecb",
+                  "id": "7d987fe",
                   "elements": [
                     {
-                      "id": "9f10316",
+                      "id": "1ca06c6",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -332,10 +376,10 @@
                       }
                     },
                     {
-                      "id": "54cb873",
+                      "id": "c783b7f",
                       "elements": [
                         {
-                          "id": "7d31b82",
+                          "id": "77669a3",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -344,7 +388,7 @@
                           }
                         },
                         {
-                          "id": "b14c58a",
+                          "id": "4808584",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -369,7 +413,7 @@
                   }
                 },
                 {
-                  "id": "298aab8",
+                  "id": "e98be6a",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "button",
@@ -393,10 +437,10 @@
               }
             },
             {
-              "id": "2998ee0",
+              "id": "b2fcb39",
               "elements": [
                 {
-                  "id": "08bc300",
+                  "id": "290f712",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "text-editor",
