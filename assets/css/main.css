@@ -346,17 +346,23 @@ a.lap-card:hover .lap-card__media img { transform: scale(1.05); }
 .lap-why__card small { display: block; margin: 0 0 4px; padding: 0; background: transparent; color: #A0F900; font-weight: 700; font-size: 11px; }
 .lap-why__card h3 { font-size: 15px; margin: 0 0 6px; color: #FFFFFF; font-family: var(--lp-display); font-weight: 700; }
 .lap-why__card p { margin: 0; font-size: 13px; line-height: 1.5; color: #B8C1C8; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.lap-banner { margin-top: 40px; padding: 28px 32px; border-radius: 20px; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.12); color: #fff; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
-.lap-banner__icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(160,249,0,.12); color: #A0F900; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 52px; }
-.lap-banner__icon .dashicons { width: 24px; height: 24px; font-size: 24px; color: #A0F900; }
-.lap-banner p { margin: 0; flex: 1; min-width: 220px; font-size: 16px; line-height: 1.5; color: #FFFFFF; }
-.lap-banner p strong { color: #FFFFFF; font-weight: 700; }
-.lap-banner span { color: var(--lp-green); font-weight: 700; }
-.lap-banner small { display: block; margin-top: 6px; color: #B8C1C8; font-size: 14px; font-weight: 400; }
-.lap-quote { margin: 28px 0 0; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.12); color: #FFFFFF; text-align: center; }
-.lap-quote blockquote { margin: 0 0 10px; font-size: 18px; line-height: 1.6; }
-.lap-quote figcaption { color: #A0F900; font-size: 14px; font-weight: 700; font-family: var(--lp-display); }
-@media (max-width: 767px) { .lap-banner { flex-direction: column; align-items: stretch; } .lap-banner .lap-btn { width: 100%; text-align: center; } }
+.lap-banner { margin-top: 32px; padding: 20px 24px; border-radius: 16px; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.12); color: #fff; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+.lap-banner__icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(160,249,0,.12); color: #A0F900; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; }
+.lap-banner__icon .dashicons { width: 22px; height: 22px; font-size: 22px; color: #A0F900; }
+.lap-banner__line { margin: 0; flex: 1; min-width: 220px; font: 400 14px/1.5 var(--lp-body); color: #FFFFFF; }
+.lap-banner__line strong, .lap-banner__line span { white-space: nowrap; }
+@media (max-width: 767px) { .lap-banner__line strong, .lap-banner__line span { white-space: normal; } }
+.lap-banner__line strong { color: #FFFFFF; font-weight: 700; font-family: var(--lp-body); }
+.lap-banner__line span { color: var(--lp-green); font-weight: 700; font-family: var(--lp-body); }
+.lap-banner__line small { display: block; margin-top: 4px; color: #B8C1C8; font-size: 13px; font-weight: 400; }
+.lap-banner__btn { padding: 10px 22px !important; font-size: 13px !important; border-radius: 10px !important; white-space: nowrap; }
+.lap-quote { margin: 24px 0 0; padding: 20px 24px; border-radius: 16px; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.12); color: #FFFFFF; text-align: center; }
+.lap-quote__stars { color: #A0F900; margin-bottom: 10px; font-size: 16px; line-height: 1; }
+.lap-quote__stars .dashicons { width: 16px; height: 16px; font-size: 16px; color: #A0F900; }
+.lap-quote__text { margin: 0 0 8px; font: 400 14px/1.5 var(--lp-body); color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.lap-quote__person { width: 18px; height: 18px; font-size: 18px; color: #B8C1C8; flex: 0 0 18px; }
+.lap-quote figcaption { color: #A0F900; font-size: 13px; font-weight: 700; font-family: var(--lp-display); }
+@media (max-width: 767px) { .lap-banner { flex-direction: column; align-items: stretch; } .lap-banner__btn { width: 100%; text-align: center; } .lap-quote__text { font-size: 13px; } }
 .lap-ally { padding: 24px; border-radius: 16px; background: #fff; border: 1px solid #DDE3F5; }
 .lap-ally .dashicons { width: 32px; height: 32px; font-size: 28px; color: #0A1033; }
 .lap-ally h3 { margin: 10px 0 8px; font-size: 18px; }

@@ -1,16 +1,16 @@
 {
   "content": [
     {
-      "id": "43a2224",
+      "id": "61445f7",
       "elements": [
         {
-          "id": "d353f49",
+          "id": "ac36fb4",
           "elements": [
             {
-              "id": "5eca58c",
+              "id": "ca2a9cd",
               "elements": [
                 {
-                  "id": "385a3d1",
+                  "id": "51a97f3",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "text-editor",
@@ -20,7 +20,7 @@
                   }
                 },
                 {
-                  "id": "dd2bec9",
+                  "id": "f5bcc76",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "heading",
@@ -31,7 +31,7 @@
                   }
                 },
                 {
-                  "id": "e0796a0",
+                  "id": "521f39e",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "text-editor",
@@ -49,13 +49,13 @@
               }
             },
             {
-              "id": "753f0f9",
+              "id": "3f0ddf4",
               "elements": [
                 {
-                  "id": "78f3b8a",
+                  "id": "c752c76",
                   "elements": [
                     {
-                      "id": "a8c968a",
+                      "id": "d913ab4",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -75,10 +75,10 @@
                       }
                     },
                     {
-                      "id": "1519cb9",
+                      "id": "56dde97",
                       "elements": [
                         {
-                          "id": "45e5459",
+                          "id": "c9c1dfc",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -88,7 +88,7 @@
                           }
                         },
                         {
-                          "id": "e257501",
+                          "id": "c969c7b",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "heading",
@@ -99,7 +99,7 @@
                           }
                         },
                         {
-                          "id": "3ae93b3",
+                          "id": "20b9ec4",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -125,10 +125,10 @@
                   }
                 },
                 {
-                  "id": "c62bda5",
+                  "id": "86f7a28",
                   "elements": [
                     {
-                      "id": "4cfb164",
+                      "id": "5bd3cb9",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -148,10 +148,10 @@
                       }
                     },
                     {
-                      "id": "66198e9",
+                      "id": "1d6267e",
                       "elements": [
                         {
-                          "id": "72c1248",
+                          "id": "670187f",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -161,7 +161,7 @@
                           }
                         },
                         {
-                          "id": "a65eb93",
+                          "id": "34a9ce1",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "heading",
@@ -172,7 +172,7 @@
                           }
                         },
                         {
-                          "id": "88c7d2b",
+                          "id": "da598f1",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -198,10 +198,10 @@
                   }
                 },
                 {
-                  "id": "54f443f",
+                  "id": "ad753f0",
                   "elements": [
                     {
-                      "id": "c1d206c",
+                      "id": "2f5ae76",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -221,10 +221,10 @@
                       }
                     },
                     {
-                      "id": "36e1fea",
+                      "id": "691440d",
                       "elements": [
                         {
-                          "id": "80313b0",
+                          "id": "aa41860",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -234,7 +234,7 @@
                           }
                         },
                         {
-                          "id": "f8d3db7",
+                          "id": "4266198",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "heading",
@@ -245,7 +245,7 @@
                           }
                         },
                         {
-                          "id": "9c8d09c",
+                          "id": "4792275",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -271,10 +271,10 @@
                   }
                 },
                 {
-                  "id": "ac6a3d4",
+                  "id": "11b84de",
                   "elements": [
                     {
-                      "id": "56f06a6",
+                      "id": "f591786",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -294,10 +294,10 @@
                       }
                     },
                     {
-                      "id": "1a29c97",
+                      "id": "def593f",
                       "elements": [
                         {
-                          "id": "4df8029",
+                          "id": "1e90a48",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -307,7 +307,7 @@
                           }
                         },
                         {
-                          "id": "b4c7f15",
+                          "id": "181f4de",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "heading",
@@ -318,7 +318,7 @@
                           }
                         },
                         {
-                          "id": "168cd3d",
+                          "id": "3d50627",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -352,13 +352,13 @@
               }
             },
             {
-              "id": "54b4178",
+              "id": "39c6481",
               "elements": [
                 {
-                  "id": "7d987fe",
+                  "id": "8ca4b14",
                   "elements": [
                     {
-                      "id": "1ca06c6",
+                      "id": "46e3076",
                       "elements": [],
                       "elType": "widget",
                       "widgetType": "icon",
@@ -369,17 +369,17 @@
                         },
                         "size": {
                           "unit": "px",
-                          "size": 24
+                          "size": 22
                         },
                         "primary_color": "#A0F900",
                         "_css_classes": "lp-why-band__icon"
                       }
                     },
                     {
-                      "id": "c783b7f",
+                      "id": "0104857",
                       "elements": [
                         {
-                          "id": "77669a3",
+                          "id": "9187ffd",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -388,7 +388,7 @@
                           }
                         },
                         {
-                          "id": "4808584",
+                          "id": "2c3e81f",
                           "elements": [],
                           "elType": "widget",
                           "widgetType": "text-editor",
@@ -413,7 +413,7 @@
                   }
                 },
                 {
-                  "id": "e98be6a",
+                  "id": "bb6c506",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "button",
@@ -424,7 +424,7 @@
                       "is_external": "on",
                       "nofollow": ""
                     },
-                    "size": "md",
+                    "size": "sm",
                     "_css_classes": "lp-why-band__btn"
                   }
                 }
@@ -437,15 +437,63 @@
               }
             },
             {
-              "id": "b2fcb39",
+              "id": "7000df9",
               "elements": [
                 {
-                  "id": "290f712",
+                  "id": "e36b4ac",
                   "elements": [],
                   "elType": "widget",
                   "widgetType": "text-editor",
                   "settings": {
-                    "editor": "<blockquote class=\"lp-why-quote__text\">“Más que un diseño, me asesoraron en todo lo relacionado con la publicidad de mi negocio.”</blockquote><p class=\"lp-why-quote__author\">— MaFé</p>"
+                    "editor": "<p class=\"lp-why-quote__stars\">★★★★★</p>",
+                    "_css_classes": "lp-why-quote__stars-wrap"
+                  }
+                },
+                {
+                  "id": "c72cd3a",
+                  "elements": [
+                    {
+                      "id": "18874b8",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-user-friends",
+                          "library": "fa-solid"
+                        },
+                        "size": {
+                          "unit": "px",
+                          "size": 18
+                        },
+                        "primary_color": "#B8C1C8",
+                        "_css_classes": "lp-why-quote__person"
+                      }
+                    },
+                    {
+                      "id": "0f0f0fe",
+                      "elements": [],
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p class=\"lp-why-quote__text\">“Más que un diseño, me asesoraron en todo lo relacionado con la publicidad de mi negocio.”</p>"
+                      }
+                    }
+                  ],
+                  "elType": "container",
+                  "settings": {
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "css_classes": "lp-why-quote__row"
+                  }
+                },
+                {
+                  "id": "7ff8d76",
+                  "elements": [],
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p class=\"lp-why-quote__author\">— MaFé</p>"
                   }
                 }
               ],

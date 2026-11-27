@@ -107,11 +107,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<div class="lap-banner">
 				<span class="lap-banner__icon" aria-hidden="true"><span class="dashicons dashicons-lightbulb"></span></span>
-				<p><strong>No necesitas saber de publicidad.</strong> <span>Nosotros te ayudamos a elegir.</span><small>Cuéntanos qué necesitas y te orientamos sin costo adicional.</small></p>
-				<a class="lap-btn lap-btn--green lap-btn--sm" href="<?php echo esc_url( lp_wa_link( 'Hola, necesito asesoría para elegir.' ) ); ?>" target="_blank" rel="noopener">Hablar con un asesor</a>
+				<p class="lap-banner__line"><strong>No necesitas saber de publicidad.</strong> <span>Nosotros te ayudamos a elegir.</span><small>Cuéntanos qué necesitas y te orientamos sin costo adicional.</small></p>
+				<a class="lap-btn lap-btn--green lap-banner__btn" href="<?php echo esc_url( lp_wa_link( 'Hola, necesito asesoría para elegir.' ) ); ?>" target="_blank" rel="noopener">Hablar con un asesor</a>
 			</div>
 			<figure class="lap-quote">
-				<blockquote>“Más que un diseño, me asesoraron en todo lo relacionado con la publicidad de mi negocio.”</blockquote>
+				<div class="lap-quote__stars" aria-hidden="true"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></div>
+				<blockquote class="lap-quote__text"><span class="lap-quote__person dashicons dashicons-admin-users" aria-hidden="true"></span><span>“Más que un diseño, me asesoraron en todo lo relacionado con la publicidad de mi negocio.”</span></blockquote>
 				<figcaption>— MaFé</figcaption>
 			</figure>
 		</div>
